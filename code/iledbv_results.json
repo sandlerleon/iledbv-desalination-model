@@ -1,0 +1,134 @@
+{
+  "stream_table": [
+    {
+      "stage": "Pretreatment (subsurface intake)",
+      "flow_basis": "m3 permeate",
+      "energy_raw": 0.1,
+      "unit_raw": "kWh/m3 permeate",
+      "kwh_per_m3_permeate": 0.1
+    },
+    {
+      "stage": "SWRO pumping (gross, pre-recovery)",
+      "flow_basis": "Pf*Qf/eta_pump",
+      "energy_raw": null,
+      "unit_raw": "-",
+      "kwh_per_m3_permeate": 4.644119627649038
+    },
+    {
+      "stage": "Isobaric PX recovery credit",
+      "flow_basis": "m3 RO brine",
+      "energy_raw": null,
+      "unit_raw": "-",
+      "kwh_per_m3_permeate": -2.0842808888888884
+    },
+    {
+      "stage": "Post-treatment",
+      "flow_basis": "m3 permeate",
+      "energy_raw": 0.07,
+      "unit_raw": "kWh/m3 permeate",
+      "kwh_per_m3_permeate": 0.07
+    },
+    {
+      "stage": "SUBTOTAL -- Case C (desalination stage)",
+      "flow_basis": "",
+      "energy_raw": null,
+      "unit_raw": "",
+      "kwh_per_m3_permeate": 2.7298387387601495
+    },
+    {
+      "stage": "Secondary brine concentration (NF)",
+      "flow_basis": "m3 RO brine",
+      "energy_raw": 0.75,
+      "unit_raw": "kWh/m3 brine",
+      "kwh_per_m3_permeate": 0.9166666666666667
+    },
+    {
+      "stage": "SUBTOTAL -- Case D",
+      "flow_basis": "",
+      "energy_raw": null,
+      "unit_raw": "",
+      "kwh_per_m3_permeate": 3.646505405426816
+    },
+    {
+      "stage": "Precipitation (Ca/Mg dosing+mixing)",
+      "flow_basis": "m3 concentrate",
+      "energy_raw": 0.0,
+      "unit_raw": "not separately modeled (Note 1)",
+      "kwh_per_m3_permeate": 0.0
+    },
+    {
+      "stage": "Crystallization (MVC, electrical)",
+      "flow_basis": "m3 crystallizer feed",
+      "energy_raw": 11.5,
+      "unit_raw": "kWh/m3 crystallizer feed",
+      "kwh_per_m3_permeate": 7.027777777777779
+    },
+    {
+      "stage": "TOTAL -- Case E (complete, near-ZLD)",
+      "flow_basis": "",
+      "energy_raw": null,
+      "unit_raw": "",
+      "kwh_per_m3_permeate": 10.674283183204594
+    }
+  ],
+  "subtotals_kwh_per_m3": {
+    "case_c": 2.7298387387601495,
+    "case_d": 3.646505405426816,
+    "case_e": 10.674283183204594,
+    "pf_bar": 63.949527272727266,
+    "c_b_brine_g_l": 63.4530909090909,
+    "q_conc2": 0.275
+  },
+  "validation": {
+    "case_c_target": 2.73,
+    "case_c_model": 2.7298387387601495,
+    "case_d_target": 3.65,
+    "case_d_model": 3.646505405426816,
+    "case_e_target": 10.68,
+    "case_e_model": 10.674283183204594,
+    "caco3_target_kg_per_m3_feed": 0.966,
+    "caco3_model": 0.9665797606480518,
+    "mgoh2_target_kg_per_m3_feed": 3.0,
+    "mgoh2_model": 2.975818478231146
+  },
+  "rejection_sensitivity": [
+    {
+      "ro_divalent_rejection": 0.985,
+      "kg_caco3_per_m3_feed": 0.9613531740486434,
+      "kg_mgoh2_per_m3_feed": 2.959727335405883
+    },
+    {
+      "ro_divalent_rejection": 0.99,
+      "kg_caco3_per_m3_feed": 0.9635309184650638,
+      "kg_mgoh2_per_m3_feed": 2.9664319782497426
+    },
+    {
+      "ro_divalent_rejection": 0.995,
+      "kg_caco3_per_m3_feed": 0.965708662881484,
+      "kg_mgoh2_per_m3_feed": 2.973136621093602
+    },
+    {
+      "ro_divalent_rejection": 0.997,
+      "kg_caco3_per_m3_feed": 0.9665797606480518,
+      "kg_mgoh2_per_m3_feed": 2.975818478231146
+    }
+  ],
+  "market_corrected": {
+    "plant_m3_d": 10000.0,
+    "mgoh2_t_yr": 24137.194323430405,
+    "caco3_t_yr": 7840.035836367531,
+    "global_mgoh2_market_t_yr": 387580.0,
+    "market_share_pct": 6.227667661755097,
+    "v_annual_m3": 3650000.0
+  },
+  "mineral_price_sensitivity": {
+    "baseline_net_lcow": 0.42142674274871994,
+    "mgoh2_price_-30%": 0.5801370615877144,
+    "mgoh2_price_+30%": 0.26271642390972527,
+    "caco3_price_-30%": 0.7242884010851094,
+    "caco3_price_+30%": 0.11856508441233027,
+    "both_prices_-30%": 0.8829987199241041,
+    "both_prices_+30%": -0.04014523442666418
+  },
+  "market_source": "KBV Research, Global Magnesium Hydroxide Market Size, Share & Trends Analysis Report, Report ID KBV-20009, Feb 2024 (2022 base-year volume: 3,875.8 hundred tonnes = 387,580 t/yr, +4.6% CAGR 2019-2022)"
+}
