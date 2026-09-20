@@ -130,7 +130,7 @@ modelled rather than validated.
 
 Concept DOIs, which always resolve to the latest version:
 
-- Code and model: [10.5281/zenodo.22178234](https://doi.org/10.5281/zenodo.22178234)
+- Code and model: [10.5281/zenodo.22178234](https://doi.org/10.5281/zenodo.22178234) — this release: v2.0.1
 - Manuscript: [10.5281/zenodo.22178232](https://doi.org/10.5281/zenodo.22178232)
 
 ## License

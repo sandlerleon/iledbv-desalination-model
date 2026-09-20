@@ -175,8 +175,10 @@ for num, c, r in [
   "architecture does not have, and excluded the valorization train it does. Comparisons "
   "in the revision are made on that table rather than headline to headline."),
  ("13.", "State code version and runtime environment.",
-  "Added to Data Availability: repository, release tag and commit hash, Python version "
-  "and library versions."),
+  "Added to Data Availability: the repository with release tag v2.0.1, Python 3.11.9 "
+  "and NumPy 2.4.6, and archival DOIs for both the code (10.5281/zenodo.22178234) "
+  "and this manuscript with its response letter (10.5281/zenodo.22178232). The "
+  "commands that regenerate every number are listed."),
 ]:
     QA(num, c, r)
 

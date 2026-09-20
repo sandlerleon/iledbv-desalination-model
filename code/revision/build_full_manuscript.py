@@ -652,9 +652,16 @@ TBL(["Symbol", "Definition", "Unit"], [
 H("Data availability")
 P("The model implementation, the parameter set, the random seed, and the scripts "
   "that generate every table and figure are openly available at "
-  "https://github.com/sandlerleon/iledbv-desalination-model. The revision was "
-  "produced with Python 3.11 and NumPy; the repository release tag and commit hash "
-  "corresponding to this version are recorded in the repository README.", indent=True)
+  "https://github.com/sandlerleon/iledbv-desalination-model, release tag v2.0.1. An "
+  "archived snapshot of that release is deposited at "
+  "https://doi.org/10.5281/zenodo.22178234; this manuscript and the point-by-point "
+  "response to reviewers are deposited at https://doi.org/10.5281/zenodo.22178232. "
+  "Both are concept DOIs and resolve to the current version of each deposit. The "
+  "revision was produced with Python "
+  "3.11.9 and NumPy 2.4.6. Running iledbv_revision_v2.py, design_and_costing.py and "
+  "boron_recalc.py regenerates the JSON files from which every number in this paper "
+  "is taken; audit_manuscript.py re-checks the built document against them. No "
+  "experimental data were generated.", indent=True)
 
 H("Declaration of competing interest")
 P("The author declares no competing financial or non-financial interests.", indent=True)
