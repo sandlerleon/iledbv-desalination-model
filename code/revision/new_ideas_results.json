@@ -1,0 +1,59 @@
+{
+ "idea_1a": "not applicable - subsurface intake already performs this duty",
+ "idea_1b_centrifugal_ro": {
+  "beta_1.05": {
+   "beta": 1.05,
+   "applied_pressure_bar": 66.5,
+   "sec_with_cp": 2.66,
+   "sec_no_cp": 2.562,
+   "max_saving_kwh_m3": 0.098,
+   "max_saving_pct": 3.7
+  },
+  "beta_1.10": {
+   "beta": 1.1,
+   "applied_pressure_bar": 68.9,
+   "sec_with_cp": 2.758,
+   "sec_no_cp": 2.562,
+   "max_saving_kwh_m3": 0.196,
+   "max_saving_pct": 7.1
+  },
+  "beta_1.15": {
+   "beta": 1.15,
+   "applied_pressure_bar": 71.3,
+   "sec_with_cp": 2.856,
+   "sec_no_cp": 2.562,
+   "max_saving_kwh_m3": 0.294,
+   "max_saving_pct": 10.3
+  },
+  "beta_1.20": {
+   "beta": 1.2,
+   "applied_pressure_bar": 73.8,
+   "sec_with_cp": 2.954,
+   "sec_no_cp": 2.562,
+   "max_saving_kwh_m3": 0.392,
+   "max_saving_pct": 13.3
+  }
+ },
+ "idea_2_co2": {
+  "routes": {
+   "soda-ash route (as written)": {
+    "kg_reagent_per_m3_permeate": 2.273,
+    "kg_naoh_for_mg_per_m3_permeate": 9.144,
+    "co2_owed_for_reagents_kg_per_m3": 19.647,
+    "co2_fixed_in_caco3_kg_per_m3": 0.944,
+    "net_kg_co2_per_m3_permeate": 18.703
+   },
+   "CO2 + caustic route": {
+    "kg_reagent_per_m3_permeate": 1.716,
+    "kg_naoh_for_mg_per_m3_permeate": 9.144,
+    "co2_owed_for_reagents_kg_per_m3": 20.634,
+    "co2_fixed_in_caco3_kg_per_m3": 0.944,
+    "net_kg_co2_per_m3_permeate": 19.69
+   }
+  },
+  "embodied_factors_kg_co2_per_kg": {
+   "NaOH (chlor-alkali)": 1.9,
+   "Na2CO3 (Solvay)": 1.0
+  }
+ }
+}

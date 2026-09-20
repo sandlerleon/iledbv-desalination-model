@@ -1,0 +1,54 @@
+{
+ "first_pass": {
+  "tds_mg_l": 250.0,
+  "cl_mg_l": 140.0,
+  "boron_mg_l": 0.92
+ },
+ "gravity_head": {
+  "ULE / low-energy BWRO": {
+   "bar": 6.0,
+   "psi": 87.0,
+   "ft": 201.0,
+   "m": 61.3
+  },
+  "typical second pass": {
+   "bar": 12.0,
+   "psi": 174.0,
+   "ft": 402.0,
+   "m": 122.5
+  },
+  "high-rejection second pass": {
+   "bar": 14.0,
+   "psi": 203.1,
+   "ft": 469.1,
+   "m": 143.0
+  }
+ },
+ "second_pass_energy": {
+  "full second pass, 12 bar": {
+   "delta_sec": 0.463,
+   "stage_sec": 3.193,
+   "pct_below_baseline": 19.2
+  },
+  "split-partial, 50% treated": {
+   "delta_sec": 0.231,
+   "stage_sec": 2.961,
+   "pct_below_baseline": 25.0
+  },
+  "split-partial, 35% treated": {
+   "delta_sec": 0.162,
+   "stage_sec": 2.892,
+   "pct_below_baseline": 26.8
+  },
+  "ULE elements, 6 bar, full": {
+   "delta_sec": 0.245,
+   "stage_sec": 2.975,
+   "pct_below_baseline": 24.7
+  }
+ },
+ "boron_after_second_pass": {
+  "0.9": 0.092,
+  "0.95": 0.046,
+  "0.98": 0.0184
+ }
+}

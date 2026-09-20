@@ -1,0 +1,204 @@
+{
+ "streams_as_modelled": {
+  "S1 raw seawater": {
+   "q_m3_per_m3_feed": 1.0,
+   "TDS_g_L": 35.13,
+   "ions_g_L": {
+    "Na+": 10.781,
+    "Mg2+": 1.284,
+    "Ca2+": 0.4119,
+    "K+": 0.399,
+    "Cl-": 19.353,
+    "SO4 2-": 2.712,
+    "HCO3-": 0.126,
+    "Br-": 0.0673
+   }
+  },
+  "S2 RO permeate": {
+   "q_m3_per_m3_feed": 0.45,
+   "TDS_g_L": 0.23,
+   "ions_g_L": {
+    "Na+": 0.0755,
+    "Mg2+": 0.0039,
+    "Ca2+": 0.0012,
+    "K+": 0.0028,
+    "Cl-": 0.1355,
+    "SO4 2-": 0.0081,
+    "HCO3-": 0.0009,
+    "Br-": 0.0005
+   }
+  },
+  "S3 RO brine": {
+   "q_m3_per_m3_feed": 0.55,
+   "TDS_g_L": 63.69,
+   "ions_g_L": {
+    "Na+": 19.5401,
+    "Mg2+": 2.3314,
+    "Ca2+": 0.7479,
+    "K+": 0.7232,
+    "Cl-": 35.0764,
+    "SO4 2-": 4.9243,
+    "HCO3-": 0.2284,
+    "Br-": 0.122
+   }
+  },
+  "S4 concentrator permeate": {
+   "q_m3_per_m3_feed": 0.275,
+   "TDS_g_L": 5.73,
+   "ions_g_L": {
+    "Na+": 1.954,
+    "Mg2+": 0.0466,
+    "Ca2+": 0.015,
+    "K+": 0.0723,
+    "Cl-": 3.5076,
+    "SO4 2-": 0.0985,
+    "HCO3-": 0.0228,
+    "Br-": 0.0122
+   }
+  },
+  "S5 concentrator concentrate": {
+   "q_m3_per_m3_feed": 0.275,
+   "TDS_g_L": 121.66,
+   "ions_g_L": {
+    "Na+": 37.1261,
+    "Mg2+": 4.6162,
+    "Ca2+": 1.4808,
+    "K+": 1.374,
+    "Cl-": 66.6452,
+    "SO4 2-": 9.75,
+    "HCO3-": 0.4339,
+    "Br-": 0.2318
+   }
+  },
+  "S6 crystallizer feed": {
+   "q_m3_per_m3_feed": 0.275,
+   "TDS_g_L": 124.8,
+   "ions_g_L": {
+    "Na+": 38.74,
+    "Mg2+": 0.0923,
+    "Ca2+": 7.534,
+    "K+": 1.374,
+    "Cl-": 66.6452,
+    "SO4 2-": 9.75,
+    "HCO3-": 0.4339,
+    "Br-": 0.2318
+   }
+  }
+ },
+ "streams_true_nf": {
+  "S1 raw seawater": {
+   "TDS_g_L": 35.13
+  },
+  "S2 RO permeate": {
+   "TDS_g_L": 0.23
+  },
+  "S3 RO brine": {
+   "TDS_g_L": 63.69
+  },
+  "S4 concentrator permeate": {
+   "TDS_g_L": 39.22
+  },
+  "S5 concentrator concentrate": {
+   "TDS_g_L": 88.16
+  },
+  "S6 crystallizer feed": {
+   "TDS_g_L": 91.29
+  }
+ },
+ "precipitation_design": {
+  "reagent_Na2CO3_kg_per_m3_feed": 1.0231,
+  "reagent_CaOH2_kg_per_m3_feed": 3.7923,
+  "stoichiometric_ratio": "1.0 mol Na2CO3 per mol Ca; 1.0 mol Ca(OH)2 per mol Mg",
+  "assumed_excess_dosing": "10% over stoichiometric, typical of seawater practice",
+  "CaCO3_kg_per_m3_feed": 0.9661,
+  "MgOH2_kg_per_m3_feed": 2.9851,
+  "reactor_residence_time_min": {
+   "CaCO3 stage": 30,
+   "Mg(OH)2 stage": 45
+  },
+  "reactor_volume_m3_per_1000m3d_feed": {
+   "CaCO3 stage": 5.73,
+   "Mg(OH)2 stage": 8.59
+  },
+  "solid_liquid_separation": "gravity thickener followed by filter press",
+  "assumed_cake_solids_pct": {
+   "CaCO3": 65,
+   "Mg(OH)2": 45
+  },
+  "product_purity_basis": "purity is set by co-precipitation and occlusion of the NaCl background; see [9] for the dependence of yield, purity and polymorph on that background"
+ },
+ "calcium_closure": {
+  "ca_removed_g_l": 1.4068,
+  "ca_added_g_l": 7.46,
+  "mg_removed_g_l": 4.5238,
+  "q_conc2": 0.275
+ },
+ "opex": {
+  "Electricity": 1.0488,
+  "Precipitation reagents": 1.5797,
+  "Pretreatment and CIP chemicals": 0.03,
+  "Membrane replacement (RO + concentrator)": 0.04,
+  "Cartridge filters and consumables": 0.01,
+  "Labour": 0.045,
+  "Maintenance and spares (2% CAPEX/yr)": 0.055,
+  "Insurance and overhead": 0.02,
+  "Solids handling and product logistics": 0.035,
+  "TOTAL OPEX": 2.8635,
+  "_basis": "$ per m3 permeate; chemical unit prices are bulk industrial indicative values and are swept in the Monte Carlo"
+ },
+ "stage_cost_boundary": {
+  "note": "The $0.76/m3 conventional figure and the ILEDBV figure did not previously share a boundary: the conventional case included a brine outfall that ILEDBV does not have, and excluded the valorization train that ILEDBV does. Comparisons in the revision are made stage by stage on this table rather than headline to headline.",
+  "rows": [
+   [
+    "Intake and pretreatment",
+    "yes",
+    "yes"
+   ],
+   [
+    "High-pressure pumping and RO",
+    "yes",
+    "yes"
+   ],
+   [
+    "Energy recovery device",
+    "turbine ERD",
+    "isobaric PX"
+   ],
+   [
+    "Post-treatment",
+    "yes",
+    "yes"
+   ],
+   [
+    "Boron-compliant second pass",
+    "yes",
+    "yes (added in revision)"
+   ],
+   [
+    "Brine outfall / discharge",
+    "yes",
+    "not applicable (no outfall)"
+   ],
+   [
+    "Brine concentration",
+    "no",
+    "yes"
+   ],
+   [
+    "Precipitation and solids handling",
+    "no",
+    "yes"
+   ],
+   [
+    "Crystallization",
+    "no",
+    "yes"
+   ],
+   [
+    "Mineral revenue credit",
+    "no",
+    "yes"
+   ]
+  ]
+ }
+}

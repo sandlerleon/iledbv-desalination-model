@@ -1,0 +1,194 @@
+{
+ "t1_concentrator": {
+  "pi_feed_bar": 49.0,
+  "least_work_kwh_per_m3_brine": 0.9435,
+  "manuscript_range": [
+   0.5,
+   0.75,
+   1.0
+  ],
+  "ratio_to_minimum": {
+   "0.5": 0.53,
+   "0.75": 0.795,
+   "1.0": 1.06
+  },
+  "realistic_at_second_law_eff": {
+   "0.25": 3.774,
+   "0.4": 2.359,
+   "0.55": 1.715
+  }
+ },
+ "t2_osmotic": {
+  "phi_gain_0.00": {
+   "linear_bar": 93.3,
+   "corrected_bar": 93.3,
+   "understated_pct": 0.0
+  },
+  "phi_gain_0.08": {
+   "linear_bar": 93.3,
+   "corrected_bar": 100.9,
+   "understated_pct": 8.1
+  },
+  "phi_gain_0.16": {
+   "linear_bar": 93.3,
+   "corrected_bar": 108.5,
+   "understated_pct": 16.2
+  },
+  "phi_gain_0.24": {
+   "linear_bar": 93.3,
+   "corrected_bar": 116.0,
+   "understated_pct": 24.3
+  }
+ },
+ "t3_polarization": {
+  "beta_1.05": {
+   "sec_with_polarization": 2.66,
+   "sec_if_eliminated": 2.562,
+   "ceiling_kwh_per_m3": 0.098,
+   "ceiling_pct": 3.7
+  },
+  "beta_1.10": {
+   "sec_with_polarization": 2.758,
+   "sec_if_eliminated": 2.562,
+   "ceiling_kwh_per_m3": 0.196,
+   "ceiling_pct": 7.1
+  },
+  "beta_1.15": {
+   "sec_with_polarization": 2.856,
+   "sec_if_eliminated": 2.562,
+   "ceiling_kwh_per_m3": 0.294,
+   "ceiling_pct": 10.3
+  },
+  "beta_1.20": {
+   "sec_with_polarization": 2.954,
+   "sec_if_eliminated": 2.562,
+   "ceiling_kwh_per_m3": 0.392,
+   "ceiling_pct": 13.3
+  }
+ },
+ "precipitation_routes": {
+  "A: soda ash + lime (as written)": {
+   "reagents": {
+    "Na2CO3": 2.273,
+    "CaO": 6.411
+   },
+   "co2_reagents": 9.966,
+   "ca_released_kmol": 0.1143,
+   "mg_imported_kg": 0.0,
+   "extra_kwh": 0.0,
+   "co2_fixed_in_product": 0.944,
+   "ca_removed_kmol": 0.0214,
+   "ca_closure_ratio": 5.33
+  },
+  "B: dosed CO2 + lime": {
+   "reagents": {
+    "CO2 (captured)": 0.944,
+    "CaO": 7.613
+   },
+   "co2_reagents": 8.192,
+   "ca_released_kmol": 0.1358,
+   "mg_imported_kg": 0.0,
+   "extra_kwh": 0.0,
+   "co2_fixed_in_product": 0.944,
+   "ca_removed_kmol": 0.0214,
+   "ca_closure_ratio": 6.33
+  },
+  "C: dosed CO2 + dolime": {
+   "reagents": {
+    "CO2 (captured)": 0.944,
+    "dolime CaO.MgO": 5.509
+   },
+   "co2_reagents": 5.667,
+   "ca_released_kmol": 0.0786,
+   "mg_imported_kg": 3.333333333333333,
+   "extra_kwh": 0.0,
+   "co2_fixed_in_product": 0.944,
+   "ca_removed_kmol": 0.0214,
+   "ca_closure_ratio": 3.66
+  },
+  "D: dosed CO2 + electrochemical base": {
+   "reagents": {
+    "CO2 (captured)": 0.944,
+    "NaOH (on-site)": 10.86
+   },
+   "co2_reagents": -0.944,
+   "ca_released_kmol": 0.0,
+   "mg_imported_kg": 0.0,
+   "extra_kwh": 27.15,
+   "co2_fixed_in_product": 0.944,
+   "ca_removed_kmol": 0.0214,
+   "ca_closure_ratio": 0.0
+  }
+ },
+ "co2_fixed_kg_per_m3_permeate": 0.944,
+ "eroi": {
+  "conc_0.75": {
+   "conc_sec_used": 0.75,
+   "kwh_per_m3_permeate": 7.944,
+   "kwh_per_tonne_product": 901.0,
+   "gross_value_usd_per_m3_feed": 2.854,
+   "kwh_per_usd_product": 1.25
+  },
+  "conc_1.71": {
+   "conc_sec_used": 1.71,
+   "kwh_per_m3_permeate": 9.118,
+   "kwh_per_tonne_product": 1035.0,
+   "gross_value_usd_per_m3_feed": 2.854,
+   "kwh_per_usd_product": 1.44
+  },
+  "conc_2.36": {
+   "conc_sec_used": 2.36,
+   "kwh_per_m3_permeate": 9.912,
+   "kwh_per_tonne_product": 1125.0,
+   "gross_value_usd_per_m3_feed": 2.854,
+   "kwh_per_usd_product": 1.56
+  }
+ },
+ "monte_carlo": {
+  "n": 300000,
+  "seed": 20260919,
+  "concentrator_sec": {
+   "median": 2.358,
+   "p05": 1.763,
+   "p95": 3.558
+  },
+  "sec_total": {
+   "median": 13.11,
+   "p05": 10.798,
+   "p95": 15.482
+  },
+  "lcow_gross": {
+   "median": 3.462,
+   "p05": 2.82,
+   "p95": 4.14
+  },
+  "mineral_credit": {
+   "median": 1.252,
+   "p05": 0.834,
+   "p95": 1.779
+  },
+  "reagent_opex": {
+   "median": 1.697,
+   "p05": 1.264,
+   "p95": 2.131
+  },
+  "total_opex": {
+   "median": 3.04,
+   "p05": 2.4,
+   "p95": 3.715
+  },
+  "lcow_net": {
+   "median": 2.198,
+   "p05": 1.383,
+   "p95": 3.01
+  },
+  "co2_net_kg_per_m3": {
+   "median": 14.324,
+   "p05": 10.691,
+   "p95": 18.228
+  },
+  "p_beats_conventional_lcow": 0.001,
+  "p_lcow_negative": 0.0,
+  "p_carbon_negative": 0.0
+ }
+}

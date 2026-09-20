@@ -1,0 +1,29 @@
+{
+ "permeate_boron_range_mg_l": [
+  0.55,
+  1.54
+ ],
+ "compliance": {
+  "WHO drinking-water guideline": {
+   "limit_mg_l": 2.4,
+   "verdict": "complies in all cases"
+  },
+  "EU Drinking Water Directive (2020/2184)": {
+   "limit_mg_l": 1.5,
+   "verdict": "complies in 5 of 6 cases"
+  },
+  "Common municipal contract specification": {
+   "limit_mg_l": 1.0,
+   "verdict": "complies in 3 of 6 cases"
+  },
+  "Irrigation of boron-sensitive crops": {
+   "limit_mg_l": 0.5,
+   "verdict": "fails in all cases"
+  }
+ },
+ "second_pass_product_mg_l": {
+  "0.90": 0.154,
+  "0.95": 0.077,
+  "0.98": 0.031
+ }
+}

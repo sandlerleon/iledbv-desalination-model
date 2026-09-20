@@ -1,0 +1,417 @@
+[
+ {
+  "doi": "10.3390/w12092420",
+  "title": "Numerical Modeling of Beach Well Intake as Pre-Treatment for a Desalination Plant",
+  "authors": [
+   "O. Alagha",
+   "O. Abuhajar"
+  ],
+  "journal": "Water",
+  "year": 2020,
+  "volume": "12",
+  "pages": "2420",
+  "type": "journal-article",
+  "cited_by": 2,
+  "used_for": "beach well intake as pretreatment, numerical model"
+ },
+ {
+  "doi": "10.1016/j.desal.2021.115069",
+  "title": "Pathways for minimal and zero liquid discharge with enhanced reverse osmosis technologies: Module-scale modeling and techno-economic assessment",
+  "authors": [
+   "A.A. Atia",
+   "N.Y. Yip",
+   "V. Fthenakis"
+  ],
+  "journal": "Desalination",
+  "year": 2021,
+  "volume": "509",
+  "pages": "115069",
+  "type": "journal-article",
+  "cited_by": 80,
+  "used_for": "MLD/ZLD pathways with enhanced RO, module-scale modelling"
+ },
+ {
+  "doi": "10.1016/j.desal.2017.04.012",
+  "title": "Osmotically assisted reverse osmosis for high salinity brine treatment",
+  "authors": [
+   "T.V. Bartholomew",
+   "L. Mey",
+   "J.T. Arena",
+   "N.S. Siefert",
+   "M.S. Mauter"
+  ],
+  "journal": "Desalination",
+  "year": 2017,
+  "volume": "421",
+  "pages": "3-11",
+  "type": "journal-article",
+  "cited_by": 220,
+  "used_for": "osmotically assisted RO for high-salinity brine"
+ },
+ {
+  "doi": "10.1002/adfm.76165",
+  "title": "Spatial Decoupling of Water Evaporation and Salt Crystallization via a 3D Discrete Wettability Patterned Architecture",
+  "authors": [
+   "M. Ding",
+   "Z. Duan",
+   "L. Zhang",
+   "H. Wu",
+   "H. Xu",
+   "C. Liu",
+   "Y. Zhou",
+   "C. Li"
+  ],
+  "journal": "Advanced Functional Materials",
+  "year": 2026,
+  "volume": "36",
+  "pages": "e76165",
+  "type": "journal-article",
+  "cited_by": 15,
+  "used_for": "R2 named: spatial decoupling of evaporation and salt crystallization"
+ },
+ {
+  "doi": "10.1002/adfm.202512220",
+  "title": "Tree‐Inspired 3D Biomimetic Evaporator for Efficient Solar Desalination and Automated Salt Collection with Zero Liquid Discharge",
+  "authors": [
+   "M. Ding",
+   "Z. Duan",
+   "D. Zhao",
+   "C. Liu",
+   "C. Li"
+  ],
+  "journal": "Advanced Functional Materials",
+  "year": 2025,
+  "volume": "36",
+  "pages": "e12220",
+  "type": "journal-article",
+  "cited_by": 40,
+  "used_for": "R2 named: tree-inspired 3D biomimetic solar evaporator"
+ },
+ {
+  "doi": "10.1016/j.watres.2025.125053",
+  "title": "Modular gradient-porous evaporator for efficient solar desalination and autonomous salt harvesting from high-salinity brine",
+  "authors": [
+   "M. Ding",
+   "Z. Duan",
+   "L. Zhang",
+   "C.Y. Liu",
+   "C. Li",
+   "J. Zhang"
+  ],
+  "journal": "Water Research",
+  "year": 2026,
+  "volume": "290",
+  "pages": "125053",
+  "type": "journal-article",
+  "cited_by": 53,
+  "used_for": "R2 named: modular gradient-porous evaporator, high-salinity"
+ },
+ {
+  "doi": "10.5004/dwt.2020.24953",
+  "title": "Technical and economical comparison study between operation costs of beach well intake and open intake for seawater reverse osmosis desalination in the Persian Gulf",
+  "authors": [
+   "S.M.H. Fayaz",
+   "R. Mafigholami",
+   "F. Razavian",
+   "K. Ghasemipanah"
+  ],
+  "journal": "Desalination and Water Treatment",
+  "year": 2020,
+  "volume": "178",
+  "pages": "74-82",
+  "type": "journal-article",
+  "cited_by": 2,
+  "used_for": "beach well vs open intake operating costs (in this journal)"
+ },
+ {
+  "doi": "10.2166/wrd.2024.086",
+  "title": "Seeded membrane distillation crystallization for hypersaline brine treatment",
+  "authors": [
+   "S. Flatscher",
+   "F. Hell",
+   "M.W. Hlawitschka",
+   "J. Lahnsteiner"
+  ],
+  "journal": "Water Reuse",
+  "year": 2024,
+  "volume": "14",
+  "pages": "16-29",
+  "type": "journal-article",
+  "cited_by": 7,
+  "used_for": "seeded membrane distillation crystallization, hypersaline"
+ },
+ {
+  "doi": "10.1016/j.desal.2024.117443",
+  "title": "Effect of sodium chloride on yield, purity, morphology and polymorphs of calcium or magnesium carbonate sequentially precipitated from brine solution",
+  "authors": [
+   "N.A. Kasimu",
+   "J. Gu"
+  ],
+  "journal": "Desalination",
+  "year": 2024,
+  "volume": "578",
+  "pages": "117443",
+  "type": "journal-article",
+  "cited_by": 13,
+  "used_for": "NaCl effect on yield, purity and polymorph in sequential Ca/Mg precipitation"
+ },
+ {
+  "doi": "10.1016/j.nxsust.2026.100388",
+  "title": "Selective recovery of calcium and magnesium from desalination brine through mineral carbonation and alkaline precipitation",
+  "authors": [
+   "N. Mahmud",
+   "M.H. El-Naas"
+  ],
+  "journal": "Next Sustainability",
+  "year": 2026,
+  "volume": "8",
+  "pages": "100388",
+  "type": "journal-article",
+  "cited_by": 0,
+  "used_for": "selective Ca/Mg recovery by mineral carbonation and alkaline precipitation"
+ },
+ {
+  "doi": "10.1016/j.desal.2004.06.034",
+  "title": "Seawater reverse osmosis plant using the pressure exchanger for energy recovery: a calculation model",
+  "authors": [
+   "G. Migliorini",
+   "E. Luzzo"
+  ],
+  "journal": "Desalination",
+  "year": 2004,
+  "volume": "165",
+  "pages": "289-298",
+  "type": "journal-article",
+  "cited_by": 18,
+  "used_for": "pressure exchanger calculation model"
+ },
+ {
+  "doi": "10.1016/j.desal.2016.02.024",
+  "title": "Thermophysical properties of seawater: A review and new correlations that include pressure dependence",
+  "authors": [
+   "K.G. Nayar",
+   "M.H. Sharqawy",
+   "L.D. Banchik",
+   "J.H. Lienhard V"
+  ],
+  "journal": "Desalination",
+  "year": 2016,
+  "volume": "390",
+  "pages": "1-24",
+  "type": "journal-article",
+  "cited_by": 553,
+  "used_for": "updated seawater property correlations with pressure dependence"
+ },
+ {
+  "doi": "10.1007/s11356-025-36553-7",
+  "title": "Salt recovery from a reverse osmosis brine by eutectic freeze crystallization method for waste brine management",
+  "authors": [
+   "A. Nemmour",
+   "H. Zhang",
+   "K.E. Kadi",
+   "I. Janajreh"
+  ],
+  "journal": "Environmental Science and Pollution Research",
+  "year": 2025,
+  "volume": "33",
+  "pages": "1930-1940",
+  "type": "journal-article",
+  "cited_by": 3,
+  "used_for": "eutectic freeze crystallization of RO brine"
+ },
+ {
+  "doi": "10.1016/j.energy.2020.118733",
+  "title": "A comparative study on minimum and actual energy consumption for the treatment of desalination brine",
+  "authors": [
+   "A. Panagopoulos"
+  ],
+  "journal": "Energy",
+  "year": 2020,
+  "volume": "212",
+  "pages": "118733",
+  "type": "journal-article",
+  "cited_by": 106,
+  "used_for": "minimum vs actual energy for brine treatment - anchors Test 1"
+ },
+ {
+  "doi": "10.1016/j.seta.2022.102477",
+  "title": "Comparative techno-economic and environmental analysis of minimal liquid discharge (MLD) and zero liquid discharge (ZLD) desalination systems for seawater brine treatment and valorization",
+  "authors": [
+   "A. Panagopoulos",
+   "V. Giannika"
+  ],
+  "journal": "Sustainable Energy Technologies and Assessments",
+  "year": 2022,
+  "volume": "53",
+  "pages": "102477",
+  "type": "journal-article",
+  "cited_by": 69,
+  "used_for": "MLD vs ZLD techno-economic and environmental comparison"
+ },
+ {
+  "doi": "10.1016/j.ecmx.2026.101682",
+  "title": "The worldwide lowest specific energy consumption measured in a seawater desalination plant – Real integration and opportunities of improvement",
+  "authors": [
+   "B. Peñate-Suarez",
+   "J.A.d.l. Fuente-Bencomo",
+   "G. Melián-Monroy",
+   "S.Y. Arenas Urrea",
+   "R. González-Almenara",
+   "L. García-Rodríguez"
+  ],
+  "journal": "Energy Conversion and Management: X",
+  "year": 2026,
+  "volume": "30",
+  "pages": "101682",
+  "type": "journal-article",
+  "cited_by": 1,
+  "used_for": "R3's named paper: lowest measured SWRO SEC, 1.794 kWh/m3"
+ },
+ {
+  "doi": "10.1016/j.desal.2024.117436",
+  "title": "Utilizing seawater and brine to simultaneously produce high-purity magnesium sulfate and vaterite-type calcium carbonate",
+  "authors": [
+   "R.K. Puthanveettil",
+   "S. Kim",
+   "M.J. Kim"
+  ],
+  "journal": "Desalination",
+  "year": 2024,
+  "volume": "578",
+  "pages": "117436",
+  "type": "journal-article",
+  "cited_by": 8,
+  "used_for": "high-purity MgSO4 and vaterite CaCO3 from seawater and brine"
+ },
+ {
+  "doi": "10.1016/j.desal.2013.04.006",
+  "title": "Thermodynamic analysis on the theoretical energy consumption of seawater desalination",
+  "authors": [
+   "H. Qian",
+   "Z. Zhou",
+   "L. Zhang",
+   "F. Wu",
+   "Q. Zhang",
+   "Z. Zhang"
+  ],
+  "journal": "Desalination",
+  "year": 2013,
+  "volume": "320",
+  "pages": "73-79",
+  "type": "journal-article",
+  "cited_by": 15,
+  "used_for": "theoretical energy consumption of seawater desalination"
+ },
+ {
+  "doi": "10.1080/19443994.2015.1030110",
+  "title": "Membrane crystallization for salts recovery from brine—an experimental and theoretical analysis",
+  "authors": [
+   "C. Quist-Jensen",
+   "F. Macedonio",
+   "E. Drioli"
+  ],
+  "journal": "Desalination and Water Treatment",
+  "year": 2016,
+  "volume": "57",
+  "pages": "7593-7603",
+  "type": "journal-article",
+  "cited_by": 98,
+  "used_for": "membrane crystallization for salt recovery (in this journal)"
+ },
+ {
+  "doi": "10.5541/ijot.673573",
+  "title": "Brine Management: Techno-economic Analysis of a Mechanical Vapor Compression Energy System for a Near-Zero Liquid Discharge Application",
+  "authors": [
+   "A. RANDON",
+   "S. RECH",
+   "A. LAZZARETTO"
+  ],
+  "journal": "International Journal of Thermodynamics",
+  "year": 2020,
+  "volume": "23",
+  "pages": "128-137",
+  "type": "journal-article",
+  "cited_by": 17,
+  "used_for": "MVC techno-economics for near-ZLD brine management"
+ },
+ {
+  "doi": "10.1016/j.desal.2014.12.003",
+  "title": "Environmental and economic assessment of beach well intake versus open intake for seawater reverse osmosis desalination",
+  "authors": [
+   "M.P. Shahabi",
+   "A. McHugh",
+   "G. Ho"
+  ],
+  "journal": "Desalination",
+  "year": 2015,
+  "volume": "357",
+  "pages": "259-266",
+  "type": "journal-article",
+  "cited_by": 73,
+  "used_for": "beach well vs open intake, environmental and economic"
+ },
+ {
+  "doi": "10.5004/dwt.2010.1079",
+  "title": "Thermophysical properties of seawater: a review of existing correlations and data",
+  "authors": [
+   "M.H. Sharqawy",
+   "J.H. Lienhard",
+   "S.M. Zubair"
+  ],
+  "journal": "Desalination and Water Treatment",
+  "year": 2010,
+  "volume": "16",
+  "pages": "354-380",
+  "type": "journal-article",
+  "cited_by": 1349,
+  "used_for": "seawater thermophysical property correlations incl. osmotic coefficient"
+ },
+ {
+  "doi": "10.1016/j.desal.2006.03.528",
+  "title": "Seawater reverse osmosis with isobaric energy recovery devices",
+  "authors": [
+   "R.L. Stover"
+  ],
+  "journal": "Desalination",
+  "year": 2007,
+  "volume": "203",
+  "pages": "168-175",
+  "type": "journal-article",
+  "cited_by": 247,
+  "used_for": "isobaric ERD in SWRO, the standard reference"
+ },
+ {
+  "doi": "10.1016/j.desal.2025.118654",
+  "title": "Specific energy consumption of seawater reverse osmosis desalination plants using machine learning",
+  "authors": [
+   "C. Wang",
+   "L. Wang",
+   "L. Dong",
+   "H.K. Shon",
+   "J. Kim"
+  ],
+  "journal": "Desalination",
+  "year": 2025,
+  "volume": "602",
+  "pages": "118654",
+  "type": "journal-article",
+  "cited_by": 39,
+  "used_for": "modern SWRO SEC across operating plants"
+ },
+ {
+  "doi": "10.1016/j.desal.2023.116629",
+  "title": "Efficient magnesium recovery from seawater desalination brine via CO2 mineralization to synthesize hydromagnesite for uranium extraction",
+  "authors": [
+   "D. Zhang",
+   "Y. Li",
+   "J. Cao"
+  ],
+  "journal": "Desalination",
+  "year": 2023,
+  "volume": "559",
+  "pages": "116629",
+  "type": "journal-article",
+  "cited_by": 49,
+  "used_for": "Mg recovery from brine via CO2 mineralization - the dosed-CO2 route in the literature"
+ }
+]
