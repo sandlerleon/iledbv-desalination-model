@@ -86,6 +86,26 @@ P("Reviewers 3 and 4 both judged the energy comparator unsound, and they were ri
   "physical bounds is more useful than the original claim.", bold=True)
 
 # ------------------------------------------------------------------ REVIEWER 1
+P("Three analyses were added that no reviewer requested, because preparing the "
+  "revision raised a question the original could not answer: the first version "
+  "contained two independent errors, and the manuscript did not say which one "
+  "reversed the economic conclusion. An ablation (new Section 4.10) shows it was "
+  "not the thermodynamic correction. After correcting the concentrator to its "
+  "reversible bound the architecture still costs $0.64 m-3, below the $0.76 m-3 "
+  "comparator; the reversal is carried by costing the precipitation reagents "
+  "explicitly, worth 6.8 times as much. A rank-correlation attribution and an "
+  "admissibility map (new Section 4.11) reach the same conclusion independently "
+  "and state what would have to change for the architecture to compete: the "
+  "recovered minerals must be worth 2.1 times their modelled value at present "
+  "reagent prices. We think this makes the paper more useful than a bare negative "
+  "result, and it supports the title rather than the section ordering.")
+
+P("One correction follows from that work. The previous draft stated that no "
+  "sampled combination produced a net cost below the conventional comparator. "
+  "The deposited Monte Carlo shows that 271 of 300,000 did, the best reaching "
+  "$0.35 m-3. The text now reports the count, the fraction and the best case. We "
+  "are grateful the error was caught before review rather than during it.")
+
 H("Reviewer 1")
 for num, c, r in [
  ("1.", "Introduction should not be subdivided; too brief; review recent progress for each "

@@ -60,6 +60,29 @@ Total dissolved solids also *rise* across precipitation, 121.7 → 124.8 g/L,
 because the dissolved reagents added exceed the solids removed. Selective
 precipitation does not lighten the crystallizer duty; it slightly increases it.
 
+## What actually reversed the conclusion
+
+The original contained two independent errors, and it matters which one carried
+the reversal. Ablating them in sequence, at median parameters:
+
+| | net LCOW | change |
+|---|---|---|
+| original assumptions | $0.41 | — |
+| + concentrator corrected to the thermodynamic bound | $0.64 | +0.23 |
+| + reagents costed explicitly | **$2.19** | **+1.55** |
+| *conventional comparator* | *$0.76* | |
+
+**The thermodynamic correction did not flip the economics.** After it the
+architecture still beat the comparator. The reagent accounting did, by 6.8×.
+Rank-correlation attribution agrees independently: two of the three leading
+parameters are alkalinity-chain terms, while the concentrator second-law
+efficiency — the quantity the paper analyses most closely — ranks 9th of 13.
+
+**Where it would work.** At present reagent prices the recovered minerals must be
+worth **2.1× their modelled value** to reach the comparator; with the reagent
+requirement eliminated, 0.8× suffices. 271 of 300,000 sampled configurations do
+beat the comparator, the best at $0.35/m³.
+
 ## Results
 
 Monte Carlo, 300,000 samples, seed 20260919, thirteen parameters sampled from
