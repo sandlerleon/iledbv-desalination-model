@@ -13,6 +13,8 @@ from docx.shared import Pt, Inches
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = r"C:\Users\Leon\Downloads\DWT\DWT_Response_to_Reviewers.docx"
 V2 = json.load(io.open(os.path.join(HERE, "iledbv_revision_v2.json"), encoding="utf-8"))
+RV = json.load(io.open(os.path.join(HERE, "reversal_results.json"),
+                       encoding="utf-8"))
 DC = json.load(io.open(os.path.join(HERE, "design_costing.json"), encoding="utf-8"))
 SP = json.load(io.open(os.path.join(HERE, "second_pass_results.json"), encoding="utf-8"))
 BR = json.load(io.open(os.path.join(HERE, "boron_results.json"), encoding="utf-8"))
@@ -99,6 +101,22 @@ P("Three analyses were added that no reviewer requested, because preparing the "
   "recovered minerals must be worth 2.1 times their modelled value at present "
   "reagent prices. We think this makes the paper more useful than a bare negative "
   "result, and it supports the title rather than the section ordering.")
+
+P("A further section was added for the same reason. Having established that "
+  "alkalinity is the binding constraint, the paper stopped there, which left it "
+  "diagnosing a problem it had the means to address. Section 4.12 now evaluates "
+  "the electrochemical alkalinity route already tabulated in Section 4.7 and "
+  "reports what it does: the calcium balance closes exactly, reagent carbon "
+  "becomes net negative, and the reagent bill is replaced by %.1f kWh m-3 of "
+  "electrochemical demand. Because that substitutes an energy price for a "
+  "commodity price it has a crossing the purchased-alkali route does not — "
+  "the comparator is reached below $%.3f kWh-1, where route A remains above it "
+  "even at zero electricity cost. We report this as conditional: the capital "
+  "cost of the electrochemical stage is not modelled, the chlorine co-product is "
+  "neither costed nor credited, and the same demand drawn at grid carbon "
+  "intensity is worse than the route it replaces. The abstract and conclusions "
+  "were rewritten accordingly, and Figure 8 is new."
+  % (RV["extra_kwh_D"], RV["breakeven_D"]))
 
 P("One correction follows from that work. The previous draft stated that no "
   "sampled combination produced a net cost below the conventional comparator. "

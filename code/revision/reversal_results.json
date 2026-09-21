@@ -1,0 +1,73 @@
+{
+ "comparator": 0.76,
+ "capex": 0.422,
+ "fixed_opex": 0.235,
+ "credit": 1.252,
+ "sec_base": 13.11,
+ "sec_route_D": 40.26,
+ "reagent_A": 1.698,
+ "reagent_D": 0.038,
+ "extra_kwh_D": 27.15,
+ "route_crossover_usd_per_kwh": 0.06115,
+ "breakeven_A": null,
+ "breakeven_D": 0.032720372374088966,
+ "scenarios": [
+  {
+   "scenario": "Gulf utility-scale solar PPA, low",
+   "usd_per_kwh": 0.0104,
+   "lcow_A": 1.239,
+   "lcow_D": -0.139,
+   "D_beats_comparator": true
+  },
+  {
+   "scenario": "Gulf utility-scale solar PPA, typical",
+   "usd_per_kwh": 0.015,
+   "lcow_A": 1.3,
+   "lcow_D": 0.047,
+   "D_beats_comparator": true
+  },
+  {
+   "scenario": "Saudi industrial tariff, indicative",
+   "usd_per_kwh": 0.048,
+   "lcow_A": 1.732,
+   "lcow_D": 1.375,
+   "D_beats_comparator": false
+  },
+  {
+   "scenario": "Model base case",
+   "usd_per_kwh": 0.08,
+   "lcow_A": 2.152,
+   "lcow_D": 2.663,
+   "D_beats_comparator": false
+  },
+  {
+   "scenario": "High-cost grid",
+   "usd_per_kwh": 0.12,
+   "lcow_A": 2.676,
+   "lcow_D": 4.274,
+   "D_beats_comparator": false
+  }
+ ],
+ "route_D_effects": {
+  "ca_closure_A": 5.33,
+  "ca_closure_D": 0.0,
+  "co2_reagents_A": 9.966,
+  "co2_reagents_D": -0.944
+ },
+ "carbon": [
+  {
+   "grid": "solar-dominated, 0.05 kg CO2/kWh",
+   "kg_per_kwh": 0.05,
+   "co2_A": 9.68,
+   "co2_D": 0.13,
+   "D_negative": false
+  },
+  {
+   "grid": "Saudi grid mix, 0.55 kg CO2/kWh",
+   "kg_per_kwh": 0.55,
+   "co2_A": 16.23,
+   "co2_D": 20.26,
+   "D_negative": false
+  }
+ ]
+}

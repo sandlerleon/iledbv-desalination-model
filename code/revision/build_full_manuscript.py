@@ -22,8 +22,19 @@ SP = json.load(io.open(os.path.join(HERE, "second_pass_results.json"), encoding=
 BR = json.load(io.open(os.path.join(HERE, "boron_results.json"), encoding="utf-8"))
 
 mc = V2["monte_carlo"]
+RV = json.load(io.open(os.path.join(HERE, "reversal_results.json"),
+                       encoding="utf-8"))
 ATTR = json.load(io.open(os.path.join(HERE, "attribution_results.json"),
                          encoding="utf-8"))
+ROUTES_A = V2["precipitation_routes"]["A: soda ash + lime (as written)"]
+ROUTES_D = V2["precipitation_routes"]["D: dosed CO2 + electrochemical base"]
+_CB = {c["grid"]: c for c in RV["carbon"]}
+CO2_MIX = _CB["Saudi grid mix, 0.55 kg CO2/kWh"]["co2_D"]
+CO2_MIX_A = _CB["Saudi grid mix, 0.55 kg CO2/kWh"]["co2_A"]
+CO2_CLEAN = _CB["solar-dominated, 0.05 kg CO2/kWh"]["co2_D"]
+_floor = lambda c: RV["capex"] + RV["reagent_D"] + RV["fixed_opex"] - c
+RV_HALF = (RV["comparator"] - _floor(RV["credit"] * 0.5)) / RV["sec_route_D"]
+RV_ZERO = (RV["comparator"] - _floor(0.0)) / RV["sec_route_D"]
 t1 = V2["t1_concentrator"]
 t3 = V2["t3_polarization"]["beta_1.20"]
 RT = V2["precipitation_routes"]
@@ -122,10 +133,16 @@ ABSTRACT = (
  "realisable mineral credit, and Monte Carlo propagation (300,000 samples) gives a "
  "net levelized cost of $%.2f m-3 (90%% interval $%.2f-$%.2f) against $0.76 m-3 for "
  "conventional SWRO. Brine mineral valorization by alkaline precipitation is limited "
- "by the base, not by the brine."
+ "by the base — but by its supply route, not its stoichiometry. Generating the "
+ "base electrochemically closes the calcium balance, makes reagent carbon net "
+ "negative, and reaches the conventional comparator below $%.3f kWh-1, where the "
+ "purchased-alkali route stays above it even at zero electricity cost. That "
+ "conclusion is conditional on low-carbon supply and excludes the uncosted "
+ "electrochemical capital."
 ) % (w_min, lo, hi, mc["sec_total"]["median"], A["co2_reagents"], Dd["extra_kwh"],
      A["ca_closure_ratio"], mc["reagent_opex"]["median"], mc["mineral_credit"]["median"],
-     mc["lcow_net"]["median"], mc["lcow_net"]["p05"], mc["lcow_net"]["p95"])
+     mc["lcow_net"]["median"], mc["lcow_net"]["p05"], mc["lcow_net"]["p95"],
+     RV["breakeven_D"])
 P(ABSTRACT)
 
 H("Keywords", 2)
@@ -605,6 +622,67 @@ P("Figure 7C maps the probability that net LCOW falls below the comparator over 
   % (ATTR["admissibility"]["credit_needed_at_full_reagent_cost"],
      ATTR["admissibility"]["credit_needed_at_zero_reagent_cost"]), indent=True)
 
+
+# ------------------------------- 4.12 unbinding the constraint: route D
+H("4.12  Unbinding the constraint: electrochemical alkalinity supply", 2)
+P("Sections 4.10 and 4.11 establish that the alkalinity requirement, not the "
+  "concentrator, is what makes this architecture uncompetitive. That is a "
+  "statement about how base is supplied, not about the architecture as such. "
+  "The stoichiometry is fixed \u2014 two equivalents per mole of Mg(OH)2 "
+  "however the base arrives \u2014 but the supply route is a design choice, "
+  "and Section 4.7 evaluated four of them. Route D, in which base is generated "
+  "electrochemically on site and captured CO2 is dosed as the carbonate "
+  "source, changes the binding constraint rather than relaxing it.", indent=True)
+P("Three consequences follow, and they are of different kinds. Stoichiometrically, "
+  "no lime is added, so no calcium is released and the closure ratio falls from "
+  "%.2f to %.2f: the calcium balance closes exactly. In carbon terms the only "
+  "reagent is captured CO2, which ends up bound in the carbonate product, so "
+  "reagent carbon becomes %+.2f kg CO2 per cubic metre against %+.2f for the "
+  "purchased-alkali route. Economically, the reagent bill of $%.2f m-3 is "
+  "replaced by %.1f kWh m-3 of electrochemical demand, raising modelled total "
+  "specific energy consumption from %.1f to %.1f kWh m-3."
+  % (ROUTES_A["ca_closure_ratio"], ROUTES_D["ca_closure_ratio"],
+     ROUTES_D["co2_reagents"], ROUTES_A["co2_reagents"],
+     RV["reagent_A"], RV["extra_kwh_D"], RV["sec_base"], RV["sec_route_D"]),
+  indent=True)
+P("That substitution converts a commodity price into an energy price, and the "
+  "two do not behave alike. Solving for the electricity price at which the two "
+  "routes cost the same gives $%.3f kWh-1; below it, electrochemical supply is "
+  "cheaper. Solving for the price at which route D reaches the conventional "
+  "comparator gives $%.3f kWh-1 (Fig. 8A). The purchased-alkali route has no "
+  "such crossing: at zero electricity cost it still sits at $%.2f m-3, $%.2f "
+  "above the comparator, because the gap is reagents, capital and fixed "
+  "operating cost net of the mineral credit rather than energy. No electricity "
+  "price rescues route A; route D competes below a price that several "
+  "desalination regions already contract."
+  % (RV["route_crossover_usd_per_kwh"], RV["breakeven_D"],
+     RV["capex"] + RV["reagent_A"] + RV["fixed_opex"] - RV["credit"],
+     RV["capex"] + RV["reagent_A"] + RV["fixed_opex"] - RV["credit"]
+     - RV["comparator"]), indent=True)
+P("The conclusion does not rest on the mineral credit. Recomputing the "
+  "crossing at reduced credit gives $%.4f kWh-1 at half the modelled value and "
+  "$%.4f kWh-1 with no mineral revenue at all (Fig. 8B); the credit changes "
+  "where the line sits, not whether it exists."
+  % (RV_HALF, RV_ZERO), indent=True)
+P("Two conditions bound the result, and both are stated rather than assumed. "
+  "The electricity must be cheap, which is the crossing above; and it must "
+  "also be clean, for a separate reason. Drawing %.1f kWh m-3 from a grid at "
+  "0.55 kg CO2 kWh-1 yields %+.1f kg CO2 m-3, worse than the purchased-alkali "
+  "route at %+.1f. On solar-dominated supply at 0.05 kg CO2 kWh-1 the same "
+  "architecture is %+.2f kg m-3, close to neutral. Route D is therefore a "
+  "proposition about dedicated low-carbon generation rather than about grid "
+  "connection, and in a region with expensive or carbon-intensive power it is "
+  "worse than conventional SWRO on both axes."
+  % (RV["sec_route_D"], CO2_MIX, CO2_MIX_A, CO2_CLEAN), indent=True)
+P("Finally, one cost is absent from all of the above. An electrochemical unit "
+  "generating roughly 11 kg of base per cubic metre of permeate is an "
+  "industrial installation with capital cost that this model has no basis to "
+  "estimate, and the chlorine co-produced by a chlor-alkali route is neither "
+  "costed as a liability nor credited as a product. The figures in this "
+  "section are therefore an upper bound on route D's performance, and "
+  "obtaining a vendor quotation is the first thing a serious evaluation of it "
+  "would do.", indent=True)
+
 # =============================================================== 5. DISCUSSION
 H("5.  Discussion")
 H("5.1  Comparison with conventional SWRO", 2)
@@ -689,13 +767,24 @@ P("The valorization case, as configured, does not close, and the binding constra
   "assessments generally count neither."
   % (mc["reagent_opex"]["median"], mc["mineral_credit"]["median"],
      A["co2_reagents"], co2_fixed, Dd["extra_kwh"]), indent=True)
-P("Two narrow and tractable directions follow, and identifying them is the practical "
-  "value of this analysis. The first is low-carbon, low-cost alkalinity: "
-  "waste-derived bases, or electrochemical generation coupled to surplus renewable "
-  "capacity where the energy penalty is not charged at grid carbon intensity. The "
-  "second is closure of the calcium balance, for which calcined dolomite is a "
-  "partial answer whose cost is the import of product. Neither requires the "
-  "architecture to be redesigned, and both can be tested independently of it.", indent=True)
+P("One route unbinds that constraint, and quantifying it is the practical value of "
+  "this analysis. Generating the base electrochemically on site, with captured CO2 "
+  "as the carbonate source, closes the calcium balance exactly, makes reagent carbon "
+  "net negative at %+.2f kg CO2 m-3, and replaces the reagent bill with %.1f kWh m-3 "
+  "of electrochemical demand. Because that substitutes a commodity price for an "
+  "energy price, it has a crossing the purchased-alkali route does not: route D "
+  "reaches the conventional comparator below $%.3f kWh-1, whereas route A remains "
+  "$%.2f m-3 above it even at zero electricity cost. The result is conditional in two "
+  "ways that should be stated alongside it. The electricity must also be low carbon, "
+  "since the same demand drawn at grid intensity is worse than the route it replaces; "
+  "and the capital cost of the electrochemical unit, together with the disposition of "
+  "its chlorine co-product, is not modelled here and would have to be quoted before "
+  "the figure could be relied on. Subject to those, brine valorization appears to be "
+  "an energy-price problem rather than a stoichiometric impossibility, which is a "
+  "materially different conclusion from the one this architecture started with."
+  % (Dd["co2_reagents"], RV["extra_kwh_D"], RV["breakeven_D"],
+     RV["capex"] + RV["reagent_A"] + RV["fixed_opex"] - RV["credit"]
+     - RV["comparator"]), indent=True)
 
 # ============================================================== NOMENCLATURE
 H("Nomenclature")

@@ -83,6 +83,33 @@ worth **2.1× their modelled value** to reach the comparator; with the reagent
 requirement eliminated, 0.8× suffices. 271 of 300,000 sampled configurations do
 beat the comparator, the best at $0.35/m³.
 
+## Unbinding the constraint: electrochemical alkalinity
+
+Alkalinity is the binding constraint — but that is a statement about how base is
+*supplied*, not about the stoichiometry. Generating it electrochemically on site,
+with captured CO₂ as the carbonate source:
+
+| | purchased alkali | electrochemical |
+|---|---|---|
+| Calcium closure ratio | 5.33 | **0.00** (balance closes) |
+| Reagent carbon (kg CO₂/m³) | +9.97 | **−0.94** (net capture) |
+| Reagent cost ($/m³) | 1.70 | ~0 |
+| Extra electricity (kWh/m³) | — | 27.15 |
+
+That substitutes an energy price for a commodity price, and the two behave
+differently:
+
+- Electrochemical supply overtakes purchased alkali below **$0.061/kWh**
+- It reaches the $0.76/m³ conventional comparator below **$0.033/kWh**
+- Purchased alkali has no such crossing — at *zero* electricity cost it is still
+  **$0.34/m³ above** the comparator
+
+**Two conditions.** The power must also be low-carbon: 27 kWh/m³ drawn at grid
+intensity (0.55 kg CO₂/kWh) gives +20.3 kg CO₂/m³, worse than the route it
+replaces; on solar-dominated supply (0.05) it is +0.13, near neutral. And the
+capital cost of the electrochemical unit is **not modelled**, nor is the chlorine
+co-product costed or credited — so these figures are an upper bound.
+
 ## Results
 
 Monte Carlo, 300,000 samples, seed 20260919, thirteen parameters sampled from
