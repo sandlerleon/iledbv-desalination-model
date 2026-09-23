@@ -140,9 +140,13 @@ code/
     make_figures.py             all six figures
     harvest_refs.py             Crossref lookup for candidate references
     build_refs.py               verified reference list  -> _refs_final.json
+    reversal_analysis.py        four alkalinity routes, electricity crossovers  -> reversal_results.json
+    attribution_analysis.py     ablation, rank correlation, admissibility map  -> attribution_results.json
     build_*.py                  manuscript, introduction, response letter
     audit_manuscript.py         numerical consistency audit of the built document
-figures/                        six figures, 300 dpi
+    _scan_dwt_bugs.py           rendering artefacts, basis errors, hardcoded numerics
+    fix_rubriq_v3.py            repairs the regressions in the copyedited manuscript
+figures/                        figures, 300 dpi
 manuscript/                     revised manuscript and point-by-point response
 ```
 
@@ -153,6 +157,8 @@ pip install numpy matplotlib python-docx requests
 python code/revision/iledbv_revision_v2.py     # consistency tests + Monte Carlo
 python code/revision/design_and_costing.py     # stream table, OPEX, cost boundary
 python code/revision/boron_recalc.py           # product-water quality
+python code/revision/reversal_analysis.py      # alkalinity routes A-D
+python code/revision/attribution_analysis.py   # what actually reversed the conclusion
 python code/revision/make_figures.py           # figures
 python code/revision/audit_manuscript.py       # checks the built document against the model
 ```
@@ -176,11 +182,41 @@ No experimental data were used. Precipitation yields are taken from the
 literature; product purity is not modelled; the residual liquid fraction is
 modelled rather than validated.
 
+## Release history
+
+**v2.2.0** — three analyses added that no reviewer requested, because preparing
+the revision raised a question the earlier version could not answer: the original
+contained two independent errors, and nothing said which one reversed the economic
+conclusion.
+
+- **Section 4.10, ablation.** It was not the thermodynamic correction. Correcting
+  the concentrator to its reversible bound leaves the architecture at $0.64/m³,
+  still under the $0.76/m³ comparator; costing the precipitation reagents
+  explicitly is worth $1.55/m³, 6.8 times as much.
+- **Section 4.11, attribution and admissibility.** Rank correlation over the
+  thirteen sampled parameters reaches the same conclusion by a different route,
+  and the admissibility map states the specification a future version would have
+  to meet: at present reagent prices the recovered minerals must be worth 2.1×
+  their modelled value.
+- **Section 4.12, route D.** Generating the base electrochemically closes the
+  calcium balance exactly, makes reagent carbon net negative, and reaches the
+  conventional comparator below $0.033/kWh — which the purchased-alkali route
+  never does, at any electricity price.
+
+Also corrected in this release: the earlier text claimed no sampled combination
+beat the comparator. The deposited Monte Carlo says 271 of 300,000 did, the best
+at $0.352/m³. The manuscript now reports the count, the fraction and the best case.
+
+The manuscript was then copyedited to US English. `fix_rubriq_v3.py` records the
+forty-odd places where that pass changed the sense rather than the style — a
+conditional turned indicative, a comparison inverted, a hedge deleted — and
+restores each one while keeping the spelling and typography.
+
 ## Citation
 
 Concept DOIs, which always resolve to the latest version:
 
-- Code and model: [10.5281/zenodo.22178234](https://doi.org/10.5281/zenodo.22178234) — this release: v2.0.1
+- Code and model: [10.5281/zenodo.22178234](https://doi.org/10.5281/zenodo.22178234) — this release: v2.2.0
 - Manuscript: [10.5281/zenodo.22178232](https://doi.org/10.5281/zenodo.22178232)
 
 ## License

@@ -13,6 +13,8 @@ from docx.shared import Pt, Inches
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = r"C:\Users\Leon\Downloads\DWT\DWT_Response_to_Reviewers.docx"
 V2 = json.load(io.open(os.path.join(HERE, "iledbv_revision_v2.json"), encoding="utf-8"))
+AT = json.load(io.open(os.path.join(HERE, "attribution_results.json"),
+                       encoding="utf-8"))
 RV = json.load(io.open(os.path.join(HERE, "reversal_results.json"),
                        encoding="utf-8"))
 DC = json.load(io.open(os.path.join(HERE, "design_costing.json"), encoding="utf-8"))
@@ -93,14 +95,16 @@ P("Three analyses were added that no reviewer requested, because preparing the "
   "contained two independent errors, and the manuscript did not say which one "
   "reversed the economic conclusion. An ablation (new Section 4.10) shows it was "
   "not the thermodynamic correction. After correcting the concentrator to its "
-  "reversible bound the architecture still costs $0.64 m-3, below the $0.76 m-3 "
+  "reversible bound the architecture still costs $%.2f m-3, below the $0.76 m-3 "
   "comparator; the reversal is carried by costing the precipitation reagents "
-  "explicitly, worth 6.8 times as much. A rank-correlation attribution and an "
+  "explicitly, worth %.1f times as much. A rank-correlation attribution and an "
   "admissibility map (new Section 4.11) reach the same conclusion independently "
   "and state what would have to change for the architecture to compete: the "
-  "recovered minerals must be worth 2.1 times their modelled value at present "
+  "recovered minerals must be worth %.1f times their modelled value at present "
   "reagent prices. We think this makes the paper more useful than a bare negative "
-  "result, and it supports the title rather than the section ordering.")
+  "result, and it supports the title rather than the section ordering."
+  % (AT["ablation"][1]["lcow"], AT["ablation_note"]["ratio"],
+     AT["admissibility"]["credit_needed_at_full_reagent_cost"]))
 
 P("A further section was added for the same reason. Having established that "
   "alkalinity is the binding constraint, the paper stopped there, which left it "
@@ -120,9 +124,11 @@ P("A further section was added for the same reason. Having established that "
 
 P("One correction follows from that work. The previous draft stated that no "
   "sampled combination produced a net cost below the conventional comparator. "
-  "The deposited Monte Carlo shows that 271 of 300,000 did, the best reaching "
-  "$0.35 m-3. The text now reports the count, the fraction and the best case. We "
-  "are grateful the error was caught before review rather than during it.")
+  "The deposited Monte Carlo shows that %s of %s did, the best reaching "
+  "$%.2f m-3. The text now reports the count, the fraction and the best case. We "
+  "are grateful the error was caught before review rather than during it."
+  % (format(AT["n_beating_comparator"], ","), format(AT["n"], ","),
+     AT["min_lcow"]))
 
 H("Reviewer 1")
 for num, c, r in [
