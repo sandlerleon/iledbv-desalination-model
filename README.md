@@ -105,10 +105,35 @@ differently:
   **$0.34/m³ above** the comparator
 
 **Two conditions.** The power must also be low-carbon: 27 kWh/m³ drawn at grid
-intensity (0.55 kg CO₂/kWh) gives +20.3 kg CO₂/m³, worse than the route it
-replaces; on solar-dominated supply (0.05) it is +0.13, near neutral. And the
-capital cost of the electrochemical unit is **not modelled**, nor is the chlorine
-co-product costed or credited — so these figures are an upper bound.
+intensity (0.55 kg CO₂/kWh) gives +21.2 kg CO₂/m³, worse than the route it
+replaces; on solar-dominated supply (0.05) it is +1.07, against +9.68 for the
+purchased-alkali route. (Versions before v2.1.0 reported +20.3 and +0.13: the
+dosed CO₂ was credited twice, once as a reagent and again as carbon fixed in the
+product.) And the capital cost of the electrochemical unit is **not modelled**,
+nor is the chlorine co-product costed or credited — so these figures are an
+upper bound.
+
+## Alkalinity and calcium as one design problem (v2.1.0)
+
+`alkalinity_calcium_design.py` stops evaluating alkalinity routes one at a time
+and solves them jointly as a linear program per m³ of permeate: base from lime,
+purchased NaOH or on-site electrochemical generation; carbonate from soda ash or
+dosed CO₂; and a gypsum step after the hydroxide stage as a calcium sink, limited
+by the sulfate in the feed. The calcium balance is imposed as a constraint
+(ΔCa ≤ 0), so its shadow price is the cost of closure. On-site base is described
+by one number, its yield in mol OH⁻ per kWh, so different electrochemical
+chemistries sit on one axis.
+
+- Closing the calcium balance costs **$0.44/m³** at the base case with the
+  gypsum sink, $0.73/m³ without it; purchased NaOH never enters the optimum
+- Gypsum alone halves the calcium imbalance but cannot close it: the feed
+  carries 64 mol sulfate against 114 mol magnesium per m³ of permeate
+- For the closed loop to reach the $0.76/m³ comparator, on-site base must
+  deliver ≥ 3.6 mol OH⁻/kWh at $0.015/kWh, 8.8 at $0.03, **18.9 at $0.048**,
+  82 at $0.08
+- The reversible limit for splitting water across a bipolar junction (0.828 V
+  for 14 pH units) caps the yield at **45 mol OH⁻/kWh**, so above
+  **$0.069/kWh** no base source can close the loop against the comparator
 
 ## Results
 
@@ -142,6 +167,9 @@ code/
     build_refs.py               verified reference list  -> _refs_final.json
     reversal_analysis.py        four alkalinity routes, electricity crossovers  -> reversal_results.json
     attribution_analysis.py     ablation, rank correlation, admissibility map  -> attribution_results.json
+    alkalinity_calcium_design.py  coupled alkalinity/calcium LP, closure cost  -> alkalinity_calcium_results.json
+    make_alkalinity_figure.py   Figure 9
+    add_alkalinity_calcium_section.py  adds Section 4.13/5.4 to the copyedited manuscript (v3 -> v4)
     build_*.py                  manuscript, introduction, response letter
     audit_manuscript.py         numerical consistency audit of the built document
     _scan_dwt_bugs.py           rendering artefacts, basis errors, hardcoded numerics
@@ -153,12 +181,14 @@ manuscript/                     revised manuscript and point-by-point response
 ## Reproducing
 
 ```bash
-pip install numpy matplotlib python-docx requests
+pip install numpy scipy matplotlib python-docx requests
 python code/revision/iledbv_revision_v2.py     # consistency tests + Monte Carlo
 python code/revision/design_and_costing.py     # stream table, OPEX, cost boundary
 python code/revision/boron_recalc.py           # product-water quality
 python code/revision/reversal_analysis.py      # alkalinity routes A-D
 python code/revision/attribution_analysis.py   # what actually reversed the conclusion
+python code/revision/alkalinity_calcium_design.py  # alkalinity + calcium closure LP
+python code/revision/make_alkalinity_figure.py     # Figure 9
 python code/revision/make_figures.py           # figures
 python code/revision/audit_manuscript.py       # checks the built document against the model
 ```

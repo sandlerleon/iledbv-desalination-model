@@ -150,7 +150,9 @@ print("\n  net CO2 (kg/m3), reagent carbon plus electricity carbon:")
 carbon = []
 for glabel, g in GRID:
     ca = SEC_BASE * g + A["co2_reagents"] - co2_fixed
-    cd = sec_D * g + D["co2_reagents"] - co2_fixed
+    # Route D's reagent term is already the dosed CO2 that ends up in the
+    # carbonate, so subtracting co2_fixed again would count it twice.
+    cd = sec_D * g + D["co2_reagents"]
     carbon.append({"grid": glabel, "kg_per_kwh": g,
                    "co2_A": round(ca, 2), "co2_D": round(cd, 2),
                    "D_negative": bool(cd < 0)})

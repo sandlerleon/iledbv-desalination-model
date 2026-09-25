@@ -59,14 +59,14 @@
    "grid": "solar-dominated, 0.05 kg CO2/kWh",
    "kg_per_kwh": 0.05,
    "co2_A": 9.68,
-   "co2_D": 0.13,
+   "co2_D": 1.07,
    "D_negative": false
   },
   {
    "grid": "Saudi grid mix, 0.55 kg CO2/kWh",
    "kg_per_kwh": 0.55,
    "co2_A": 16.23,
-   "co2_D": 20.26,
+   "co2_D": 21.2,
    "D_negative": false
   }
  ]

@@ -12,7 +12,7 @@ contradictions of the kind that produced the boron error.
 import io, json, os, re
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-DOC = r"C:\Users\Leon\Downloads\DWT\ILEDBV_Manuscript_Revised_v3.docx"
+DOC = os.path.join(HERE, "..", "..", "manuscript", "ILEDBV_Manuscript_Revised_v4.docx")
 from docx import Document
 
 V2 = json.load(io.open(os.path.join(HERE, "iledbv_revision_v2.json"), encoding="utf-8"))
