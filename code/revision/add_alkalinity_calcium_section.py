@@ -435,11 +435,11 @@ def main():
     # ---------------------------------------------------- data availability
     p = find(body, "The model implementation, the parameter set")
     t = text_of(p)
-    t = t.replace("release tag v2.0.1", "release tag v2.1.0")
+    t = t.replace("release tag v2.0.1", "release tag v2.3.0")
     t = t.replace("Running iledbv_revision_v2.py, design_and_costing.py and boron_recalc.py",
                   "Running iledbv_revision_v2.py, design_and_costing.py, boron_recalc.py, "
                   "reversal_analysis.py and alkalinity_calcium_design.py")
-    assert "alkalinity_calcium_design.py" in t and "v2.1.0" in t
+    assert "alkalinity_calcium_design.py" in t and "v2.3.0" in t
     set_text(p, t)
 
     # --------------------------------------------------------- nomenclature

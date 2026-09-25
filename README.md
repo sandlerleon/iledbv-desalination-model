@@ -107,13 +107,13 @@ differently:
 **Two conditions.** The power must also be low-carbon: 27 kWh/m³ drawn at grid
 intensity (0.55 kg CO₂/kWh) gives +21.2 kg CO₂/m³, worse than the route it
 replaces; on solar-dominated supply (0.05) it is +1.07, against +9.68 for the
-purchased-alkali route. (Versions before v2.1.0 reported +20.3 and +0.13: the
+purchased-alkali route. (Versions before v2.3.0 reported +20.3 and +0.13: the
 dosed CO₂ was credited twice, once as a reagent and again as carbon fixed in the
 product.) And the capital cost of the electrochemical unit is **not modelled**,
 nor is the chlorine co-product costed or credited — so these figures are an
 upper bound.
 
-## Alkalinity and calcium as one design problem (v2.1.0)
+## Alkalinity and calcium as one design problem (v2.3.0)
 
 `alkalinity_calcium_design.py` stops evaluating alkalinity routes one at a time
 and solves them jointly as a linear program per m³ of permeate: base from lime,
@@ -217,6 +217,24 @@ modelled rather than validated.
 
 ## Release history
 
+**v2.3.0** — the version cited by the revised manuscript submitted to
+*Desalination and Water Treatment* (DWT-D-26-01366).
+
+- **Section 4.13, alkalinity and calcium as one design problem.** A linear
+  program chooses the base and carbonate sources and a gypsum calcium sink with
+  the calcium balance imposed as a constraint. Closure costs $0.44/m³ at the base
+  case with the gypsum step and $0.73/m³ without it; above $0.069/kWh no on-site
+  base can close the loop, because the reversible limit of water dissociation
+  binds.
+- **Route D carbon corrected.** The dosed CO₂ had been credited twice. On
+  solar-dominated supply route D emits +1.07 kg CO₂/m³, not +0.13; on the grid mix
+  +21.2, not +20.3. The requirement for low-carbon power is unchanged.
+- **Figures.** Figures 2–6 and Tables 5 and 8 are now cited in the text; Figure 5
+  is drawn from the same 300,000-sample Monte Carlo that produces Table 8.
+- `verify_manuscript_structure.py` checks equation, table, figure and reference
+  numbering and citation, and resolves every DOI against Crossref.
+- Revised Highlights, cover letter and a marked-up copy of the manuscript.
+
 **v2.2.0** — three analyses added that no reviewer requested, because preparing
 the revision raised a question the earlier version could not answer: the original
 contained two independent errors, and nothing said which one reversed the economic
@@ -249,7 +267,7 @@ restores each one while keeping the spelling and typography.
 
 Concept DOIs, which always resolve to the latest version:
 
-- Code and model: [10.5281/zenodo.22178234](https://doi.org/10.5281/zenodo.22178234) — this release: v2.2.0
+- Code and model: [10.5281/zenodo.22178234](https://doi.org/10.5281/zenodo.22178234) — this release: v2.3.0
 - Manuscript: [10.5281/zenodo.22178232](https://doi.org/10.5281/zenodo.22178232)
 
 ## License

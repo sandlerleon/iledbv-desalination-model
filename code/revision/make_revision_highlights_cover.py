@@ -116,7 +116,7 @@ LETTER = [
         "revision withdraws."),
     (N, "The model implementation, parameter set, random seed and the scripts that generate every "
         "table and figure are openly available at "
-        "https://github.com/sandlerleon/iledbv-desalination-model (release v2.1.0, MIT license) "
+        "https://github.com/sandlerleon/iledbv-desalination-model (release v2.3.0, MIT license) "
         "and archived at https://doi.org/10.5281/zenodo.22178234. The manuscript and response to "
         "reviewers are archived at https://doi.org/10.5281/zenodo.22178232."),
     (N, "The manuscript is original, has not been published elsewhere, and is not under "

@@ -35,7 +35,7 @@ FIXES = [
     ("replaced by the boundary comparison in Table 5.", "replaced by the boundary comparison in Table 6."),
     ("all 25 entries are cited and none is orphaned", "all 26 entries are cited and none is orphaned"),
     ("Table 5 sets out the boundary element by element", "Table 6 sets out the boundary element by element"),
-    ("release tag v2.0.1", "release tag v2.1.0"),
+    ("release tag v2.0.1", "release tag v2.3.0"),
     ("A Monte Carlo over eleven uncertain parameters", "A Monte Carlo over thirteen uncertain parameters"),
     ("(Table 7, Figure 5)", "(Tables 7 and 8, Figure 5)"),
     ("Section 5.5 proposes three specific bench-scale measurements",
