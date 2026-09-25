@@ -33,6 +33,7 @@ OUT = os.path.join(REPO, "manuscript", "ILEDBV_Manuscript_Revised_v4.docx")
 
 AC = json.load(io.open(os.path.join(HERE, "alkalinity_calcium_results.json"), encoding="utf-8"))
 RV = json.load(io.open(os.path.join(HERE, "reversal_results.json"), encoding="utf-8"))
+V2MC = json.load(io.open(os.path.join(HERE, "iledbv_revision_v2.json"), encoding="utf-8"))["monte_carlo"]
 
 B = AC["basis"]
 OPT = AC["optimisation"]
@@ -374,10 +375,19 @@ def main():
         "residual solubility of gypsum in concentrated brine, which is carried as the swept "
         "fraction f_gyp; it excludes the capital cost of any electrochemical unit and the "
         "disposition of its acid or chlorine coproduct; and the reversible limit it uses "
-        "is a thermodynamic bound, not an achievable operating point."))
+        "is a thermodynamic bound, not an achievable operating point. Lithium recovery is "
+        "excluded from the baseline: at the corrected economics the net cost gap to the "
+        "comparator is about $%.2f m-3, and no lithium credit is assumed against it."
+        % (V2MC["lcow_net"]["median"] - RV["comparator"],)))
 
     # --------------------------------------------------------- conclusions
     p = find(body, "One route unbinds that constraint")
+    t = text_of(p)
+    o = "One route unbinds that constraint, and quantifying it is the practical value of this analysis."
+    assert o in t
+    set_text(p, t.replace(o, "One modeled route removes that constraint, and quantifying the "
+                             "conditions under which it does so is the practical value of this "
+                             "analysis."))
     concl = para(
         "Treated as one design problem, alkalinity supply and calcium closure give the "
         "architecture question a quantitative answer. Closing the calcium balance costs "
@@ -388,23 +398,39 @@ def main():
         "$0.048 kWh-1 industrial tariff, and above $%.3f kWh-1 it cannot reach it at all, because the "
         "reversible limit of water dissociation, %.0f mol OH- per kWh, binds first. The next "
         "stage of this work is therefore to score candidate alkalinity pathways on cost, "
-        "carbon, yield per kWh and calcium together, as Section 5.4 sets out."
+        "carbon, yield per kWh and calcium together, as Section 5.4 sets out. This paper "
+        "does not report a working valorization process; it identifies the conditions such "
+        "a process would have to meet and quantifies how far the architecture examined "
+        "here is from them."
         % (BASE["closure_cost_usd_per_m3"], BASE["closure_cost_without_gypsum"],
            REQ["0.048"]["min_mol_OH_per_kWh"], CEIL["reversible_limit"],
            REV["max_mol_OH_per_kWh"]), "body")
     p.addnext(concl)
 
     # ------------------------------------------------------------ abstract
+    # The electrochemical sentences are worded as a modeled result with its
+    # exclusions attached, and the optimization as quantifying the conditions for
+    # closure rather than as a solution.
     p = find(body, "Integrated seawater reverse osmosis (SWRO) with brine valorization")
-    old = "That conclusion is conditional on low-carbon supply and excludes uncosted electrochemical capital."
+    old = ("Generating the base electrochemically closes the calcium balance, makes the "
+           "reagent carbon net negative, and reaches the conventional comparator below "
+           "$0.033 kWh-1, where the purchased-alkali route stays above it even at zero "
+           "electricity cost. That conclusion is conditional on low-carbon supply and "
+           "excludes uncosted electrochemical capital.")
     t = text_of(p)
-    assert old in t
+    assert old in t, "abstract sentence not found"
     set_text(p, t.replace(old, (
-        "That conclusion is conditional on low-carbon supply and excludes electrochemical "
-        "capital. Treated as a single optimization, closing the calcium balance costs $%.2f "
-        "m-3 at the base case even with a gypsum sink, and above $%.3f kWh-1 no on-site base "
-        "can close the loop, because the reversible limit of water dissociation binds."
-        % (BASE["closure_cost_usd_per_m3"], CEIL["reversible_limit"]))))
+        "In the modeled route, electrochemical base generation closes the calcium balance "
+        "and makes the reagent-carbon term net negative, but adds %.0f kWh m-3 of "
+        "electricity demand and requires low-carbon supply; it reaches the conventional "
+        "comparator below $%.3f kWh-1, where the purchased-alkali route stays above it even "
+        "at zero electricity cost, and electrochemical capital and coproduct handling are "
+        "not included. Treating alkalinity and calcium as a single optimization quantifies "
+        "the conditions for closure: the calcium balance costs $%.2f m-3 to close at the "
+        "base case even with a gypsum sink, and above $%.3f kWh-1 no on-site base can close "
+        "the loop, because the reversible limit of water dissociation binds."
+        % (RV["extra_kwh_D"], RV["breakeven_D"], BASE["closure_cost_usd_per_m3"],
+           CEIL["reversible_limit"]))))
 
     # ---------------------------------------------------- data availability
     p = find(body, "The model implementation, the parameter set")
@@ -429,6 +455,25 @@ def main():
             for r in c.paragraphs[0].runs:
                 r.font.size = 108000
 
+    # ------------------------------------- figure and table citations in text
+    # Figures 2-6 and Tables 5 and 8 were submitted but never cited in the text.
+    cites = [
+        ("to a modeled 11.85–14.37 kWh m-3.", "to a modeled 11.85–14.37 kWh m-3 (Fig. 2)."),
+        ("gives a bounded estimate of 1.72–3.77 kWh m-3.",
+         "gives a bounded estimate of 1.72–3.77 kWh m-3 (Fig. 3)."),
+        ("Table 3 shows four routes on a common basis", "Table 3 and Fig. 4 show four routes on a common basis"),
+        ("which Section 4.11 locates. No sampled configuration is carbon negative.",
+         "which Section 4.11 locates. No sampled configuration is carbon negative; Fig. 6 "
+         "separates the carbon account into its electricity and reagent terms across the "
+         "range of grid intensity."),
+        ("but not a shape.", "but not a shape. The results are summarized in Table 8 and Fig. 5."),
+        ("Costed explicitly, the precipitation reagents", "Costed explicitly (Table 5), the precipitation reagents"),
+    ]
+    for old, new_ in cites:
+        hits = [el for el in body.iterchildren() if el.tag == qn("w:p") and old in text_of(el)]
+        assert len(hits) == 1, "citation anchor not unique: %r (%d)" % (old, len(hits))
+        set_text(hits[0], text_of(hits[0]).replace(old, new_))
+
     # ------------------------------------------------------------ reference
     last = find(body, "[25] D. Zhang")
     last.addnext(para(
@@ -436,6 +481,11 @@ def main():
         "Standard Seawater and the definition of the Reference-Composition Salinity Scale, "
         "Deep Sea Research Part I: Oceanographic Research Papers 55 (2008) 50-72. "
         "https://doi.org/10.1016/j.dsr.2007.10.001", "ref"))
+
+    # stray private-use character left by the copyedit (after "Labor" in Table 5)
+    for tn in body.iter(qn("w:t")):
+        if tn.text and "" in tn.text:
+            tn.text = tn.text.replace("", "")
 
     doc.save(OUT)
     print("saved", OUT)

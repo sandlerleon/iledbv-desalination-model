@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-FIGDIR = os.path.join(HERE, "figures")
+FIGDIR = os.path.join(HERE, "..", "..", "figures")
 os.makedirs(FIGDIR, exist_ok=True)
 
 V2 = json.load(io.open(os.path.join(HERE, "iledbv_revision_v2.json"), encoding="utf-8"))
@@ -140,9 +140,9 @@ def fig3_floor():
     effs = np.linspace(0.15, 1.0, 300)
     ax.plot(effs * 100, w / effs, lw=2, color=BLUE, label="attainable stage energy, $w_{min}/\\eta_{II}$")
     ax.axhline(w, ls="--", lw=1.4, color=RED)
-    ax.text(17, w * 1.16, "reversible minimum %.2f" % w, color=RED, fontsize=8, ha="left")
+    ax.text(99, w - 0.30, "reversible minimum %.2f" % w, color=RED, fontsize=8, ha="right")
     ax.axhspan(0.5, 1.0, color=RED, alpha=0.12)
-    ax.text(20, 0.72, "range assumed in the\noriginal (0.5–1.0)", color=RED, fontsize=8)
+    ax.text(16, 0.58, "range assumed in the original (0.5–1.0)", color=RED, fontsize=8)
     ax.axvspan(25, 55, color=GREEN, alpha=0.10)
     ax.text(40, 5.2, "real high-pressure\nmembrane stages", color=GREEN, fontsize=8, ha="center")
     ax.set_xlabel("Second-law efficiency of the stage (%)")
@@ -180,39 +180,31 @@ def fig4_routes():
 
 # ---------------------------------------------------------------- Figure 5
 def fig5_montecarlo():
-    rng = np.random.default_rng(mc["seed"])
-    n = 200_000
-    R, qb = 0.45, 0.55
-    qc = qb * 0.5
-    w = t1["least_work_kwh_per_m3_brine"]
-    conc = w / rng.uniform(0.25, 0.55, n)
-    sec = rng.uniform(0.05, 0.80, n) + 2.63 + conc * qb / R + rng.uniform(8, 15, n) * qc / R
-    reag = (1.0231 * rng.uniform(0.18, 0.35, n) + 3.7923 * rng.uniform(0.08, 0.18, n)) / R
-    lcow = 1375 * (1 + rng.uniform(0.2, 0.6, n)) * 0.08 / 365 + sec * rng.uniform(0.05, 0.12, n) \
-        + reag + 0.235
-    credit = (0.966 * rng.uniform(0.5, 0.7, n) * 470 * rng.uniform(0.7, 1.3, n)
-              + 3.00 * rng.uniform(0.05, 0.20, n) * 800 * rng.uniform(0.7, 1.3, n)) / 1000 / R
-    net = lcow - credit
+    # The exact draw behind Table 8: same function, seed and sample count.
+    import iledbv_revision_v2 as M
+    smp = M.monte_carlo(n=mc["n"], seed=mc["seed"], return_samples=True)
+    net, reag, credit = smp["lcow_net"], smp["reagents"], smp["credit"]
+    assert abs(float(np.median(net)) - mc["lcow_net"]["median"]) < 5e-4
 
     fig, (a1, a2) = plt.subplots(1, 2, figsize=(10.0, 3.8))
     a1.hist(net, bins=140, color=BLUE, alpha=0.85)
     a1.axvline(0.76, color=RED, lw=1.8, ls="--")
-    a1.text(0.80, a1.get_ylim()[1] * 0.92, "conventional SWRO\n$0.76 m$^{-3}$",
+    a1.text(0.80, a1.get_ylim()[1] * 0.92, "conventional SWRO\n\\$0.76 m$^{-3}$",
             color=RED, fontsize=8)
     a1.axvline(float(np.median(net)), color="black", lw=1.4)
     a1.text(float(np.median(net)) + 0.06, a1.get_ylim()[1] * 0.60,
-            "median\n$%.2f" % np.median(net), fontsize=8)
-    a1.set_xlabel("Net levelized cost of water ($ m$^{-3}$)")
+            "median\n\\$%.2f" % np.median(net), fontsize=8)
+    a1.set_xlabel(r"Net levelized cost of water (\$ m$^{-3}$)")
     a1.set_ylabel("Samples")
     a1.set_title("(a)  Net LCOW", fontsize=10)
 
     a2.hist(reag, bins=140, color=ORANGE, alpha=0.85, label="reagent cost")
     a2.hist(credit, bins=140, color=GREEN, alpha=0.6, label="mineral credit")
-    a2.set_xlabel("$ per m$^{-3}$ permeate")
+    a2.set_xlabel(r"\$ per m$^{3}$ of permeate")
     a2.set_ylabel("Samples")
     a2.set_title("(b)  Reagent cost against mineral credit", fontsize=10)
     a2.legend(frameon=False, fontsize=8)
-    fig.suptitle("Monte Carlo propagation, 200,000 samples", fontsize=10.5, y=1.02)
+    fig.suptitle("Monte Carlo propagation, {:,} samples".format(mc["n"]), fontsize=10.5, y=1.02)
     save(fig, "figure5_monte_carlo")
 
 

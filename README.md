@@ -162,7 +162,7 @@ code/
     second_pass_analysis.py     boron/chloride polishing, gravity-feed check
     boron_recalc.py             boron across feed, ageing and temperature  -> boron_results.json
     new_ideas_assessment.py     centrifugal-RO ceiling, CO2 mineralization
-    make_figures.py             all six figures
+    make_figures.py             Figures 1-6 (Figure 5 is the exact Monte Carlo draw behind Table 8)
     harvest_refs.py             Crossref lookup for candidate references
     build_refs.py               verified reference list  -> _refs_final.json
     reversal_analysis.py        four alkalinity routes, electricity crossovers  -> reversal_results.json
@@ -172,6 +172,8 @@ code/
     add_alkalinity_calcium_section.py  adds Section 4.13/5.4 to the copyedited manuscript (v3 -> v4)
     build_*.py                  manuscript, introduction, response letter
     audit_manuscript.py         numerical consistency audit of the built document
+    verify_manuscript_structure.py  equations/tables/figures cited in order, references cited, DOIs checked on Crossref
+    update_response_letter_v4.py  aligns the response letter's cross-references with manuscript v4
     _scan_dwt_bugs.py           rendering artefacts, basis errors, hardcoded numerics
     fix_rubriq_v3.py            repairs the regressions in the copyedited manuscript
 figures/                        figures, 300 dpi
@@ -191,6 +193,7 @@ python code/revision/alkalinity_calcium_design.py  # alkalinity + calcium closur
 python code/revision/make_alkalinity_figure.py     # Figure 9
 python code/revision/make_figures.py           # figures
 python code/revision/audit_manuscript.py       # checks the built document against the model
+python code/revision/verify_manuscript_structure.py  # citation order, reference and DOI checks
 ```
 
 The manuscript builders read their numbers from the JSON outputs rather than

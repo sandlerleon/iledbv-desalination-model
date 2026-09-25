@@ -168,7 +168,7 @@ def eroi(conc_sec):
 
 
 # =============================================================== Monte Carlo
-def monte_carlo(n=300_000, seed=20260919):
+def monte_carlo(n=300_000, seed=20260919, return_samples=False):
     rng = np.random.default_rng(seed)
     w_min = float(least_work(PI_BRINE, CONC_RECOVERY))
 
@@ -215,6 +215,9 @@ def monte_carlo(n=300_000, seed=20260919):
         return {"median": round(float(np.median(a)), 3),
                 "p05": round(float(np.percentile(a, 5)), 3),
                 "p95": round(float(np.percentile(a, 95)), 3)}
+
+    if return_samples:          # used by make_figures.py so Figure 5 is this exact draw
+        return {"lcow_net": lcow_net, "reagents": reagents, "credit": credit}
 
     return {"n": n, "seed": seed,
             "concentrator_sec": s(conc_sec), "sec_total": s(sec),
