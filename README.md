@@ -15,6 +15,42 @@ for **Desalination and Water Treatment** (manuscript DWT-D-26-01366).
 > The earlier results are retained in git history and in `code/` for comparison;
 > they should not be cited.
 
+## Revision 2 (October 2026)
+
+Revision 2 answers four comments from Reviewer 4, all of them about presentation,
+and changes **no model, parameter, assumption or result**. Every number in the
+paper is unchanged and still regenerates from the model code as it stood at
+`v2.3.0`.
+
+- Equations (1)–(14) are rebuilt as native Word equation objects; units and
+  chemical formulae are typeset throughout the text, tables and Nomenclature.
+- The abstract is cut from 369 words to the journal's 250-word limit.
+- Two new figures plot results the previous version carried only as tables:
+  **Figure 2** (stream composition, from Table 1) and **Figure 7** (cost
+  structure, from Tables 5 and 8). Both are plotted directly from values already
+  in the manuscript by `revision2/make_new_figures_v5.py`; no new calculation is
+  performed. Figures are renumbered to citation order and numbered captions are
+  added, which the previous version lacked entirely.
+- Sections 5.5 and 5.6 now state that the brine concentrator is bounded
+  thermodynamically rather than designed hydraulically, and specify the
+  element-level and product-characterization measurements that would settle
+  Reviewer 3's remaining questions.
+- Five internal inconsistencies found in checking, and not raised in review, are
+  corrected. One is substantive: the Introduction still carried a conclusion from
+  before the economic reversal.
+
+The complete submitted package is in **`revision2/`**, with `MANIFEST.txt`
+recording a SHA-256 for each document and the resolution of each figure. Print
+figures there were exported from this code with `savefig` dpi raised from 300 to
+600; `figures/` keeps the native 300 dpi output of `code/revision/make_figures.py`.
+
+**On the parameter count.** `monte_carlo()` makes fifteen `rng.uniform` draws, of
+which fourteen enter the result; `opex_frac` is unused because non-energy OPEX is
+costed explicitly rather than as a fraction. It is retained deliberately — it
+consumes values from the generator, and deleting it would shift every subsequent
+draw and change the published numbers. Fourteen is the count reported in the
+paper, and `attribution_analysis.py` ranks fourteen parameters.
+
 ## What changed, and why
 
 **The brine concentrator as originally specified is thermodynamically
@@ -137,7 +173,7 @@ chemistries sit on one axis.
 
 ## Results
 
-Monte Carlo, 300,000 samples, seed 20260919, thirteen parameters sampled from
+Monte Carlo, 300,000 samples, seed 20260919, fourteen parameters sampled from
 independent uniform ranges (see `code/revision/iledbv_revision_v2.py`):
 
 | quantity | median | 90% interval | unit |
@@ -245,7 +281,7 @@ conclusion.
   still under the $0.76/m³ comparator; costing the precipitation reagents
   explicitly is worth $1.55/m³, 6.8 times as much.
 - **Section 4.11, attribution and admissibility.** Rank correlation over the
-  thirteen sampled parameters reaches the same conclusion by a different route,
+  fourteen sampled parameters reaches the same conclusion by a different route,
   and the admissibility map states the specification a future version would have
   to meet: at present reagent prices the recovered minerals must be worth 2.1×
   their modelled value.

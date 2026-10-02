@@ -28,6 +28,15 @@ for t in doc.tables:
     for row in t.rows:
         text += "\n" + " | ".join(c.text for c in row.cells)
 
+# From Revision 2 the equations are native Word equation objects. Their content
+# lives in <m:t> elements, which python-docx does not surface through
+# Paragraph.text, so a symbol appearing only inside an equation would otherwise be
+# invisible to the checks below.
+M_T = "{http://schemas.openxmlformats.org/officeDocument/2006/math}t"
+math_runs = [e.text or "" for e in doc.element.body.iter(M_T)]
+if math_runs:
+    text += "\n" + "".join(math_runs)
+
 CHECKS = [
     ("least work of separation", "%.2f" % t1["least_work_kwh_per_m3_brine"]),
     ("attainable concentrator, low", "%.1f" % float(t1["realistic_at_second_law_eff"]["0.55"])),
@@ -87,9 +96,14 @@ if caps != refs:
     problems.append("table captions %s vs references %s" % (sorted(caps), sorted(refs)))
 
 # nomenclature must define every symbol introduced in this revision
-for sym in ("phi(S)", "w_min", "n_base", "eta_II", "beta"):
-    if text.count(sym) < 2:
-        problems.append("symbol %r appears fewer than twice - check it is in the Nomenclature" % sym)
+# From Revision 2 the symbols are typeset rather than written in ASCII, so each is
+# accepted in either spelling: phi(S) or φ(S), w_min or w with a set subscript,
+# and so on. Extracted document text flattens subscripts, hence "wmin".
+for syms in (("phi(S)", "φ(S)"), ("w_min", "wmin"), ("n_base", "nbase"),
+             ("eta_II", "ηII"), ("beta", "β")):
+    if sum(text.count(s) for s in syms) < 2:
+        problems.append("symbol %r appears fewer than twice - check it is in the Nomenclature"
+                        % (syms[0],))
 
 for p in problems:
     print("   !! %s" % p)

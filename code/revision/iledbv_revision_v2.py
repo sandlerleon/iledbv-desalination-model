@@ -182,7 +182,12 @@ def monte_carlo(n=300_000, seed=20260919, return_samples=False):
     f_mg = rng.uniform(0.05, 0.20, n)
     p_ca = PRICE_CA * rng.uniform(0.7, 1.3, n)
     p_mg = PRICE_MG * rng.uniform(0.7, 1.3, n)
-    opex_frac = rng.uniform(0.25, 0.45, n)
+    # Unused. Non-energy OPEX is costed explicitly below, not as a fraction, so
+    # this draw never enters the result. It is retained deliberately: it consumes
+    # n values from the generator, and removing it would shift every subsequent
+    # draw and change the published numbers. Fourteen of these fifteen draws are
+    # used, which is the parameter count reported in the paper.
+    opex_frac = rng.uniform(0.25, 0.45, n)  # noqa: F841 - see comment above
     emb_cao = rng.uniform(0.9, 1.5, n)
     emb_soda = rng.uniform(0.8, 1.3, n)
     grid = rng.uniform(0.15, 0.65, n)
