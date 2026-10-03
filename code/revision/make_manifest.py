@@ -56,6 +56,21 @@ WHAT CHANGED AFTER THAT VERIFICATION (manuscript v5 -> v6, 3 October 2026)
   references 1-36 all listed and all cited. Every one of the 36 DOIs resolves against Crossref
   with a matching title; [33] differs only because the Crossref record carries inline markup
   around the subscript x in Ti3C2Tx.
+
+  A third-party language edit of v6 was then merged paragraph by paragraph
+  (code/revision/merge_language_edit_v6.py). An edited paragraph is taken only when it carries the
+  same content words, numbers, currency and unit tokens and sub/superscript runs as the source;
+  661 paragraphs were unchanged, 51 edits were accepted and 44 were kept from the source. The
+  rejected edits include 'brine' changed to 'saltwater', the reagent masses of Section 4.1 changed
+  to 'solids', '$0.061' with its dollar sign dropped, 'precipitation train' changed to 'training'
+  and 'vapor' misspelled; revision2/v6_language_edit_merge_report.txt records every decision.
+  Five final corrections follow (code/revision/apply_final_feedback_v6.py): the laminate membranes
+  of Section 5.3 are described as potential components of alternative brine-concentration and
+  crystallization systems rather than as replacing crystallization; the electricity-price crossings
+  are labelled modeled thresholds under the stated cost assumptions; the generative-AI declaration
+  states what the tool did and what was verified and by what; Data availability names the plotting
+  script for Figures 2 and 7 and the release that contains it; and numeric ranges are set with en
+  dashes. The cover letter and the response letter are dated 3 October 2026 to match.
 """
 
 

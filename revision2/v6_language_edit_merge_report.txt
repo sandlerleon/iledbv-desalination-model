@@ -1,0 +1,386 @@
+Language edit of manuscript v6: merge report
+Source: ILEDBV_Manuscript_Revised_v6.docx   Edit: ILEDBV_Manuscript_Revised_v6_updated.docx
+
+unchanged paragraphs : 661
+accepted from the edit: 51
+kept from the source  : 44
+
+#7 REJECT (content words differ: combining remove site +combine +removal +onsite)
+    kept : Integrated seawater reverse osmosis (SWRO) with brine valorization is widely proposed as a route to lower energy and near-zero liquid discharge, but such architectures are rarely tested against the physical bounds their stages must obey. Here a consistency-tes
+    edit : Integrated seawater reverse osmosis (SWRO) with brine valorization is widely proposed as a route to lower energy and near-zero liquid discharge, but such architectures are rarely tested against the physical bounds that their stages must obey. Here, a consisten
+
+#12 accept
+    was  : That concentrate is the unresolved problem. Every cubic meter of permeate is accompanied by a roughly equal volume of brine at approximately twice the feed salinity, and its disposal is increasingly constrained. Two responses have developed in parallel. The fi
+    now  : That concentrate is the unresolved problem. Every cubic meter of permeate is accompanied by a roughly equal volume of brine at approximately twice the feed salinity, and its disposal is increasingly constrained. Two responses have developed in parallel. The fi
+
+#14 accept
+    was  : The brine concentration step is where the literature is least settled and where the greatest discrepancy is found in the present study. Osmotically assisted and high-pressure membrane configurations extend the membrane concentration well beyond conventional SW
+    now  : The brine concentration step is where the literature is least settled and where the greatest discrepancy is found in the present study. Osmotically assisted and high-pressure membrane configurations extend the membrane concentration well beyond conventional SW
+
+#15 REJECT (content words differ: vapor +vapoour)
+    kept : With respect to the final concentration and crystallization, mechanical vapor compression (MVC) remains the reference technology, and a technoeconomic analysis of the MVC in near-ZLD service establishes both its energy intensity and the conditions under which 
+    edit : With respect to the final concentration and crystallization, mechanical vapoour compression (MVC) remains the reference technology, and a technoeconomic analysis of the MVC in near-ZLD service establishes both its energy intensity and the conditions under whic
+
+#16 REJECT (content words differ: observation develop +saltwater +development)
+    kept : Mineral recovery from concentrated brine is the component with the widest spread between laboratory results and process claims. The sequential precipitation of calcium and magnesium is well established chemically, and recent work has quantified how the backgro
+    edit : Mineral recovery from concentrated brine is the component with the widest spread between laboratory results and process claims. The sequential precipitation of calcium and magnesium is well established chemically, and recent work has quantified how background 
+
+#17 accept
+    was  : Integration of these components has been attempted only in part. Energy recovery and subsurface intake are routinely combined because neither constrains the other. Brine concentration has been coupled to crystallization in MLD and ZLD studies [2,15]. Mineral r
+    now  : Integration of these components has been attempted only in part. Energy recovery and subsurface intake are routinely combined because neither constrains the other. Brine concentration has been coupled to crystallization in MLD and ZLD studies [2,15]. Mineral r
+
+#18 REJECT (content words differ: propagated varied respectively +propagate +varying)
+    kept : This study addresses that gap for one representative architecture, referred to here as ILEDBV (Integrated Low-Energy Desalination with Brine Valorization), which combines subsurface intake, isobaric pressure-exchanger energy recovery, membrane brine concentrat
+    edit : This study addresses that gap for one representative architecture, referred to here as integrated low-energy desalination with brine valorization (ILEDBV), which combines subsurface intake, isobaric pressure-exchanger energy recovery, membrane brine concentrat
+
+#20 REJECT (content words differ: )
+    kept : The architecture examined here, referred to as ILEDBV (Integrated Low-Energy Desalination with Brine Valorization), is shown in Fig. 1 with stream-level mass, salinity and pressure labels for the baseline case (R = 45%, feed salinity 35 g/L). Figure 1 is the a
+    edit : The architecture examined here, referred to as ILEDBV (Integrated Low-Energy Desalination with Brine Valorization), is shown in Fig. 1 with stream-level mass, salinity and pressure labels for the baseline case (R = 45%, feed salinity 35 g/L). The author’s conc
+
+#27 accept
+    was  : 2.3 SWRO, pressure exchanger, and product-water quality
+    now  : 2.3 SWRO, pressure exchanger, and product–water quality
+
+#30 REJECT (content words differ: treating bring +increase +concentration)
+    kept : The requirement for a second pass is therefore conditional rather than absolute, and we state it as such: it is not required to meet the WHO guidelines; it is required at end-of-life conditions against a 1.0 mg L−1 contract specification, and it is required in
+    edit : The requirement for a second pass is therefore conditional rather than absolute, and we state it as such: it is not required to meet the WHO guidelines; it is required at end-of-life conditions against a 1.0 mg L−1 contract specification, and it is required in
+
+#35 accept
+    was  : The concentrated brine undergoes selective precipitation, with calcium as CaCO3 by soda-ash dosing followed by magnesium as Mg(OH)2 by lime dosing, with the design basis given in Table 4. The residue is routed to a mechanical vapor compression crystallizer, wh
+    now  : The concentrated brine undergoes selective precipitation, with calcium as CaCO3 by soda-ash dosing followed by magnesium as Mg(OH)2 by lime dosing, with the design basis given in Table 4. The residue is routed to a mechanical vapor compression crystallizer, wh
+
+#37 accept
+    was  : Symbols are defined in the Nomenclature. The solution procedure is sequential: Eqs. (1)–(3) close the water and per-ion salt balance for each membrane stage in turn; Eqs. (4)–(5) give the osmotic pressure of each stream; Eqs. (6)–(7) give the RO stage energy; 
+    now  : Symbols are defined in the Nomenclature. The solution procedure is sequential: Eqs. (1)–(3) close the water and per-ion salt balance for each membrane stage in turn; Eqs. (4)–(5) give the osmotic pressure of each stream; Eqs. (6)–(7) give the RO stage energy; 
+
+#41 accept
+    was  : Here Q is volumetric flow, C is concentration and r is membrane rejection; the subscripts f, p and b denote the feed, permeate and concentrate of a stage and the index i runs over the ions of Table 1. The osmotic pressure of a stream is taken from a linear mod
+    now  : Here, Q is the volumetric flow, C is the concentration and r is the membrane rejection; the subscripts f, p and b denote the feed, permeate and concentrate of a stage, respectively; and the index i runs over the ions of Table 1. The osmotic pressure of a strea
+
+#44 accept
+    was  : The applied feed pressure, which includes an allowance for concentration polarization, and the specific energy of the RO stage with isobaric energy recovery are:
+    now  : The applied feed pressure, which includes an allowance for concentration polarization, and the specific energy of the RO stage with isobaric energy recovery are as follows:
+
+#47 accept
+    was  : The reversible minimum work of separation for a stage, expressed per cubic meter of feed to that stage, and the actual stage energy obtained from it, are:
+    now  : The reversible minimum work of separation for a stage, expressed per cubic meter of feed to that stage, and the actual stage energy obtained from it are as follows:
+
+#50 accept
+    was  : The masses of the two precipitation products and the alkalinity their recovery requires are:
+    now  : The masses of the two precipitation products and the alkalinity required for their recovery are as follows:
+
+#54 accept
+    was  : The levelized cost of water, net of the mineral credit, is:
+    now  : The levelized cost of water, net of the mineral credit, is as follows:
+
+#57 accept
+    was  : Because φ(S) in Eq. (5) is carried as a bounded sensitivity rather than a locked correlation, the specific energy figures reported here are model estimates rather than final values. Section 4.5 shows the residual uncertainty from this source to be under 2% of 
+    now  : Because φ(S) in Eq. (5) is carried out as a bounded sensitivity rather than a locked correlation, the specific energy figures reported here are model estimates rather than final values. Section 4.5 shows the residual uncertainty from this source to be under 2%
+
+#59 REJECT (content words differ: brine +saltwater)
+    kept : The osmotic coefficient of seawater is not constant: it passes through a minimum near seawater salinity and increases as the solution concentrates, so a correlation anchored at 35 g L−1 underpredicts at brine salinities. Published seawater property correlation
+    edit : The osmotic coefficient of seawater is not constant: it passes through a minimum near seawater salinity and increases as the solution concentrates, so a correlation anchored at 35 g L−1 underpredicts at saltwater salinities. Published seawater property correla
+
+#141 REJECT (content words differ: exceed remove +amount +exceeded +amount)
+    kept : Two features of Table 1, shown graphically in Fig. 2, were not visible in the original analysis. The calcium concentration increases from 1.48 to 7.53 g L−1 across the precipitation train rather than decreasing, because lime dosing returns one calcium ion per 
+    edit : Two features of Table 1, shown graphically in Fig. 2, were not visible in the original analysis. The calcium concentration increases from 1.48 to 7.53 g L−1 across the precipitation train rather than decreasing because lime dosing returns one calcium ion per m
+
+#143 REJECT (content words differ: reagent precipitated +concentration +amount +amount +concentration +concentration +precipitate)
+    kept : Fig. 2. Stream composition through the process train, plotted from Table 1. (a) Total dissolved solids at each stream; TDS rises from 121.7 to 124.8 g L−1 across the precipitation step, because the dissolved reagents added exceed the solids removed. (b) Magnes
+    edit : Fig. 2. Stream composition through the process train is plotted in Table 1. (a) Total dissolved solids in each stream; the TDS concentration increases from 121.7 to 124.8 g L−1 across the precipitation step because the amount of dissolved solids added exceeds 
+
+#171 accept
+    was  : Table 2. Stage decomposition, kWh per cubic meter of permeate. Case C is the desalination stage, Case D adds brine concentration, and Case E adds crystallization. The original reported Case E as 10.68 kWh m−3.
+    now  : Table 2. Stage decomposition, kWh per cubic meter of permeate. Case C is the desalination stage, Case D adds brine concentration, and Case E adds crystallization. The original reported Case E is 10.68 kWh m−3.
+
+#174 REJECT (content words differ: +represent)
+    kept : Fig. 3. Stage decomposition of specific energy consumption under four concentrator assumptions, in kWh per cubic meter of permeate. The dashed line is the total of 10.68 kWh m−3 reported in the original version. Every value is a bounded model estimate rather t
+    edit : Fig. 3. Stage decomposition of specific energy consumption under four concentrator assumptions, in kWh per cubic meter of permeate. The dashed line represents the total of 10.68 kWh m−3 reported in the original version. Every value is a bounded model estimate 
+
+#176 accept
+    was  : The original included a market absorption check to test whether the recovered tonnage could in fact be sold, and that check stands: a 10,000 m3 d−1 plant would produce a material fraction of the addressable Mg(OH)2 market, so a sellable fraction well below uni
+    now  : The original included a market absorption check to test whether the recovered tonnage could in fact be sold, and that check stands: a 10,000 m3 d−1 plant would produce a material fraction of the addressable Mg(OH)2 market, so a sellable fraction well below uni
+
+#178 REJECT (content words differ: none)
+    kept : The original environmental assessment considered carbon dioxide from grid electricity only. On the corrected energy basis, the term is approximately 5.2 kg CO2 per cubic meter of permeate at a grid intensity of 0.4 kg kWh−1. Section 4.7 shows that it is the sm
+    edit : The original environmental assessment considered carbon dioxide from grid electricity only. On the corrected energy basis, the term is approximately 5.2 kg CO2 per cubic meter of permeate at a grid intensity of 0.4 kg kWh−1. Section 4.7 shows that it is the sm
+
+#181 REJECT (content words differ: evaluate)
+    kept : Integrating the rising concentrate osmotic pressure over the extracted volume gives Eq. (8). At the modeled RO brine (49 bar) and 50% concentrator recovery this evaluates to 0.944 kWh per cubic meter of brine processed. Any real stage must exceed it. The 0.5–1
+    edit : Integrating the rising concentrate osmotic pressure over the extracted volume gives Eq. (8). At the modeled RO brine (49 bar) and 50% concentrator recovery, this value is 0.944 kWh per cubic meter of brine processed. Any real stage must exceed it. The 0.5–1.0 
+
+#183 accept
+    was  : Fig. 4. Consistency test 1. Attainable brine-concentrator energy, wmin/ηII, against the second-law efficiency of the stage. The reversible minimum for the modeled feed is 0.94 kWh per cubic meter of brine processed; the 0.5-1.0 kWh m−3 range assumed in the ori
+    now  : Fig. 4. Consistency test 1. Attainable brine-concentrator energy, wmin/ηII, against the second-law efficiency of the stage. The reversible minimum for the modeled feed is 0.94 kWh per cubic meter of brine processed; the 0.5–1.0 kWh m−3 range assumed in the ori
+
+#190 accept
+    was  : Fig. 5. Consistency test 3. Net reagent carbon against additional energy demand for the four alkalinity routes of Table 3, per cubic meter of permeate. The reagent carbon burden can be removed only by moving it into the energy account.
+    now  : Fig. 5. Consistency test 3. Net reagent carbon against additional energy demand for the four alkalinity routes of Table 3 per cubic meter of permeate. The carbon burden of the reagent can be removed only by moving it into the energy account.
+
+#218 REJECT (content words differ: report +reported)
+    kept : The route as specified involves 9.97 kg of CO2 per cubic meter of permeate in reagent-embodied carbon against 0.94 kg fixed in the carbonate product and approximately double the plant’s grid emissions. An environmental assessment restricted to electricity acco
+    edit : The route as specified involves 9.97 kg of CO2 per cubic meter of permeate in reagent-embodied carbon against 0.94 kg fixed in the carbonate product and approximately double the plant’s grid emissions. An environmental assessment restricted to electricity acco
+
+#310 accept
+    was  : The parameters the consistency tests identify as governing were propagated by Monte Carlo with 300,000 samples (seed 20260919), sampling concentrator second-law efficiency, crystallizer energy, intake energy, electricity and reagent prices, CAPEX uplift, sella
+    now  : The parameters the consistency tests identify as governing were propagated by Monte Carlo with 300,000 samples (seed 20260919), sampling concentrator second-law efficiency, crystallizer energy, intake energy, electricity and reagent prices, CAPEX uplift, sella
+
+#312 REJECT (content words differ: seed +respect +selected)
+    kept : Fig. 6. Monte Carlo propagation over fourteen uncertain parameters, 300,000 samples, seed 20260919. (a) Distribution of net levelized cost of water against the conventional SWRO comparator. (b) Reagent cost and realizable mineral credit on a common axis.
+    edit : Fig. 6. With respect to Monte Carlo propagation over fourteen uncertain parameters (300,000 samples), 20260919 is selected. (a) Distribution of the net levelized cost of water against the conventional SWRO comparator. (b) Reagent cost and realizable mineral cr
+
+#430 REJECT (content words differ: explicitly come locate train +reach +located +training)
+    kept : The earlier version of this analysis treated nonenergy operating cost as a share of energy cost, which concealed the dominant term. Costed explicitly (Table 5), the precipitation reagents come to a median of $1.70 per cubic meter of permeate against a median r
+    edit : The earlier version of this analysis treated nonenergy operating cost as a share of energy cost, which concealed the dominant term. In terms of cost (Table 5), the precipitation reagents reach a median of $1.70 per cubic meter of permeate against a median real
+
+#432 accept
+    was  : Fig. 7. Cost structure. (a) Operating-cost composition from Table 5, evaluated at $0.08 kWh−1 and the median modeled SEC; the precipitation reagents, not electricity, are the largest single line. (b) Monte Carlo medians from Table 8: gross levelized cost, mine
+    now  : Fig. 7. Cost structure. (a) Operating cost composition from Table 5, evaluated at $0.08 kWh−1 and the median modeled SEC; the precipitation reagents, not electricity, are the largest single line. (b) Monte Carlo medians from Table 8: gross levelized cost, mine
+
+#434 REJECT (content words differ: counted +included)
+    kept : Fig. 8. Carbon account per cubic meter of permeate against grid carbon intensity, separated into grid electricity and reagent embodied carbon, with the net value after carbonate fixation. The original assessment counted only the electricity band.
+    edit : Fig. 8. Carbon accounts per cubic meter of permeate against grid carbon intensity and is separated into grid electricity and reagent embodied carbon, with the net value after carbonate fixation. The original assessment included only the electricity band.
+
+#438 accept
+    was  : Fig. 9. Attribution of the economic reversal. (A) Ablation of the two corrections, each turned on in sequence with all other parameters at their median. (B) Spearman rank correlation of each sampled parameter with net LCOW. (C) Probability that net LCOW falls 
+    now  : Fig. 9. Attribution of economic reversal. (A) Ablation of the two corrections, each turned on in sequence with all other parameters at their median. (B) Spearman rank correlation of each sampled parameter with net LCOW. (C) Probability that net LCOW falls belo
+
+#456 REJECT (content words differ: worth)
+    kept : This result is not what this paper’s emphasis implies. Correcting the concentrator to the thermodynamic bound increases the modeled cost by $0.23 m−3 and leaves the architecture at $0.64 m−3, which is still below the $0.76 m−3 comparator. What reverses the con
+    edit : This result is not what this paper’s emphasis implies. Correcting the concentrator to the thermodynamic bound increases the modeled cost by $0.23 m−3 and leaves the architecture at $0.64 m−3, which is still below the $0.76 m−3 comparator. This reverses the con
+
+#458 REJECT (content words differ: whether)
+    kept : Two questions follow: which sampled parameter governs the spread in net cost, and whether any region of the parameter space is competitive. Table 10 ranks the sampled parameters by Spearman rank correlation with net LCOW, together with the swing each commands 
+    edit : Two questions follow: which sampled parameter governs the spread in net cost, and is any region of the parameter space competitive? Table 10 ranks the sampled parameters by Spearman rank correlation with net LCOW, together with the swing of each command betwee
+
+#486 REJECT (content words differ: sampled +sample)
+    kept : Table 10. The eight parameters most strongly associated with net LCOW, of the fourteen sampled.
+    edit : Table 10. The eight parameters most strongly associated with the net LCOW of the fourteen samples.
+
+#487 REJECT (content words differ: most closely rank fourteen +respect +highest)
+    kept : Two of the three leading parameters, hydrated lime price and the sellable fraction of Mg(OH)2, belong to the alkalinity chain, which is the conclusion the ablation reaches by a different route. The concentrator second-law efficiency, the quantity this paper an
+    edit : Two of the three leading parameters, hydrated lime price and the sellable fraction of Mg(OH)2, belong to the alkalinity chain, which is the conclusion the ablation reaches by a different route. With respect to the efficiency of the second-law of the concentrat
+
+#488 accept
+    was  : The probability that net LCOW falls below the comparator over the plane of reagent cost and mineral value, both relative to the values modeled here, is shown in Fig. 9C. The modeled operating point lies deep in the inadmissible region. Reaching the comparator 
+    now  : The probability that net LCOW falls below the comparator over the plane of reagent cost and mineral value, both relative to the values modeled here, is shown in Fig. 9C. The modeled operating point lies deep in the inadmissible region. Reaching the comparator 
+
+#490 REJECT (subscript or superscript runs differ)
+    kept : Sections 4.10 and 4.11 establish that the alkalinity requirement, not the concentrator, is what makes this architecture uncompetitive. That is a statement about how the base is supplied, not about the architecture as such. The stoichiometry is fixed—two equiva
+    edit : Sections 4.10 and 4.11 establish that the alkalinity requirement, not the concentrator, is what makes this architecture uncompetitive. That is a statement about how the base is supplied, not about the architecture as such. The stoichiometry is fixed—two equiva
+
+#491 REJECT (content words differ: +amount)
+    kept : Three consequences follow, and they are of different types. Stoichiometrically, no lime is added; thus, no calcium is released, and the closure ratio decreases from 5.33 to 0.00, indicating that the calcium balance is exactly closed. In terms of carbon, the on
+    edit : Three consequences follow, and they are of different types. Stoichiometrically, no lime is added; thus, no calcium is released, and the closure ratio decreases from 5.33 to 0.00, indicating that the calcium balance is exactly closed. In terms of carbon, the on
+
+#492 REJECT (numbers differ: ['$0.061', '0.061'])
+    kept : That substitution converts a commodity price into an energy price, and the two do not behave alike. Solving for the electricity price at which the two routes cost the same gives $0.061 kWh−1; below it, an electrochemical supply is less expensive. Solving for t
+    edit : That substitution converts a commodity price into an energy price, and the two do not behave alike. Solving for the electricity price at which the two routes cost the same amount is 0.061 kWh−1; below it, an electrochemical supply is less expensive. Solving fo
+
+#494 accept
+    was  : Fig. 10. Unbinding the alkalinity constraint. (A) Net levelized cost against electricity price for the purchased-alkali route A and the electrochemical route D; only route D crosses the conventional comparator. (B) Electricity price at which route D reaches th
+    now  : Fig. 10. Unbinding the alkalinity constraint. (A) Net levelized cost against electricity price for the purchased-alkali route A and the electrochemical route D; only route D crosses the conventional comparator. (B) Electricity price at which route D reaches th
+
+#499 REJECT (content words differ: leastexpensive close achieve +least +expensive +closing +achieved)
+    kept : Sections 4.7 and 4.12 evaluated alkalinity routes one at a time and reported the calcium balance of each as a consequence of the route. The two are coupled. Every mole of hydroxide supplied as Ca(OH)2 imports half a mole of calcium, and the cheapest base per m
+    edit : Sections 4.7 and 4.12 evaluated alkalinity routes one at a time and reported the calcium balance of each as a consequence of the route. The two are coupled. Every mole of hydroxide supplied as Ca(OH)2 imports half a mole of calcium, and the least expensive bas
+
+#508 REJECT (content words differ: use reporting +used +stored +reported +onsite +thus +onsite)
+    kept : Hydroxide may be supplied as Ca(OH)2 (xL), as purchased NaOH (xN) or by on-site electrochemical generation (xE); carbonate for the calcium step as Na2CO3 (s) or as dosed captured CO2 (d), which requires two further equivalents of base per mole. A third calcium
+    edit : Hydroxide may be supplied as Ca(OH)2 (xL), as-purchased NaOH (xN) or by on-site electrochemical generation (xE), carbonate for the calcium step as Na2CO3(s) or as-dosed captured CO2(d), which requires two further equivalents of base per mole. A third calcium s
+
+#509 REJECT (content words differ: enter +term +onsite +reache)
+    kept : Per mole of base, the three sources order differently in money and in carbon (Fig. 11A). Lime costs $4.82 per kmol of OH− and carries 33.6 kg CO2; purchased NaOH costs $18.00 and carries 76 kg CO2; the on-site source at the chlor-alkali basis of Section 4.12, 
+    edit : Each mole of base, the three sources order differently in terms of money and carbon (Fig. 11A). Lime costs $4.82 per kmol of OH− and carries 33.6 kg of CO2; purchased NaOH costs $18.00 and carries 76 kg of CO2; and the onsite source at the chlor-alkali basis o
+
+#511 accept
+    was  : Fig. 11. Alkalinity and calcium treated as one design problem, Eq. (14). (A) Cost per kmol of hydroxide by source against electricity price, with the reversible limit of water dissociation at 45 mol OH− kWh−1. (B) Net levelized cost of the calcium-closed optim
+    now  : Fig. 11. Alkalinity and calcium are treated as one design problem, Eq. (14). (A) Cost per kmol of hydroxide by source against electricity price, with the reversible limit of water dissociation at 45 mol OH− kWh−1. (B) Net levelized cost of the calcium-closed o
+
+#514 accept
+    was  : Ca imported / removed
+    now  : Ca imported/removed
+
+#517 accept
+    was  : Net LCOW ($ m−3), $0.08 / $0.015
+    now  : Net LCOW ($ m−3), $0.08/$0.015
+
+#518 accept
+    was  : CO2 (kg m−3), 0.55 / 0.05 grid
+    now  : CO2 (kg m−3), 0.55/0.05 grid
+
+#524 accept
+    was  : 2.16 / 1.30
+    now  : 2.16/1.30
+
+#525 accept
+    was  : 16.2 / 9.7
+    now  : 16.2/9.7
+
+#531 accept
+    was  : 5.17 / 4.32
+    now  : 5.17/4.32
+
+#532 accept
+    was  : 25.9 / 19.4
+    now  : 25.9/19.4
+
+#538 accept
+    was  : 2.88 / 0.55
+    now  : 2.88/0.55
+
+#539 accept
+    was  : 21.1 / 3.1
+    now  : 21.1/3.1
+
+#545 accept
+    was  : 2.66 / 0.05
+    now  : 2.66/0.05
+
+#546 accept
+    was  : 21.2 / 1.1
+    now  : 21.2/1.1
+
+#552 accept
+    was  : 2.16 / 1.30
+    now  : 2.16/1.30
+
+#553 accept
+    was  : 16.2 / 9.7
+    now  : 16.2/9.7
+
+#559 accept
+    was  : 3.42 / 2.57
+    now  : 3.42/2.57
+
+#560 accept
+    was  : 20.3 / 13.7
+    now  : 20.3/13.7
+
+#561 REJECT (content words differ: mean +indicate)
+    kept : Table 11. Candidate architectures per cubic meter of permeate. ΔCa is calcium imported minus calcium removed; negative values mean the train removes more than it adds. On-site base at 10 mol OH− kWh−1; gypsum at fgyp = 0.70. Carbon counts CO2 fixed in the carb
+    edit : Table 11. Candidate architectures per cubic meter of permeate. ΔCa is the calcium imported minus the calcium removed; negative values indicate that the train removes more calcium than it adds. On-site base at 10 mol OH− kWh−1; gypsum at fgyp = 0.70. Carbon cou
+
+#562 REJECT (content words differ: against +compared)
+    kept : Table 11 separates what a change of sequence can do from what a change of base supply can do. Adding the gypsum step to the train as written roughly halves the imbalance, from +92.9 to +47.9 mol m−3, and the import-to-removal ratio from 5.33 to 1.72, at no rea
+    edit : Table 11 separates what a change in sequence can do from what a change in base supply can do. Adding the gypsum step to the train as written roughly halves the imbalance, from +92.9 to +47.9 mol m−3, and the import-to-removal ratio from 5.33 to 1.72, at no rea
+
+#563 REJECT (content words differ: imposing site uses site +if +assumed +onsite +used +onsite +respect)
+    kept : Solving Eq. (14) gives the cost of closure directly (Table 12). At the model base case, $0.08 kWh−1 on the Saudi grid mix, the unconstrained optimum is not the route as written: dosed CO2 displaces soda ash as the carbonate source, because captured CO2 plus it
+    edit : Solving Eq. (14) directly gives the cost of closure (Table 12). In the model base case, which is $0.08 kWh−1 on the Saudi grid mix, the unconstrained optimum is not the route as written: dosed CO2 displaces soda ash as the carbonate source because captured CO2
+
+#565 accept
+    was  : Base: lime / NaOH / on-site
+    now  : Base: lime/NaOH/on-site
+
+#573 accept
+    was  : 100% / 0% / 0%
+    now  : 100%/0%/0%
+
+#581 accept
+    was  : 49% / 0% / 51%
+    now  : 49%/0%/51%
+
+#589 accept
+    was  : 16% / 0% / 84%
+    now  : 16%/0%/84%
+
+#597 accept
+    was  : 0% / 0% / 100%
+    now  : 0%/0%/100%
+
+#604 accept
+    was  : Table 12. Optima of Eq. (14) at 10 mol OH− kWh−1. The difference between the first two rows, $0.44 m−3, is the cost of closing the calcium balance at the base case.
+    now  : Table 12. Optima of Eq. (14) at 10 mol OH− kWh−1. The difference between the first two rows, $0.44 m−3, is the cost of closing the calcium balance in the base case.
+
+#605 REJECT (content words differ: site however efficient reproduce +onsite +efficiently +reproduced)
+    kept : The second question has a sharper answer (Fig. 11B). For the calcium-closed loop to reach the $0.76 m−3 comparator, the on-site source must deliver at least 3.6 mol OH− per kWh at $0.015 kWh−1, 8.8 at $0.03, 18.9 at $0.048 and 82 at $0.08. The last figure is n
+    edit : The second question has a sharper answer (Fig. 11B). For the calcium-closed loop to reach the $0.76 m−3 comparator, the onsite source must deliver at least 3.6 mol OH− per kWh at $0.015 kWh−1, 8.8 at $0.03, 18.9 at $0.048 and 82 at $0.08. The last figure is no
+
+#606 REJECT (numbers differ: [])
+    kept : Carbon pulls the other way on a carbon-intensive grid. On-site base at 10 mol kWh−1 on the Saudi mix carries 55 kg CO2 per kmol of OH−, against 33.6 for lime, so the calcium-closed optimum at the base case emits 18.4 kg CO2 m−3 against 15.4 for the unconstrain
+    edit : Carbon pulls the other way on a carbon-intensive grid. The on-site base at 10 mol kWh−1 on the Saudi mix is 55 kg CO2 per kmol of OH−, in contrast to 33.6 kg CO2 per kmol for lime; thus, the calcium-closed optimum in the base case is 18.4 kg CO2 m−3, whereas i
+
+#611 REJECT (content words differ: )
+    kept : Assessments of mineral recovery from desalinated brine typically report favorable economic results [10,17,25]. The present analysis suggests those results are sensitive to whether the alkalinity is costed. Where the reagent demand implied by Eq. (12) is priced
+    edit : Assessments of mineral recovery from desalinated brine typically report favorable economic results [10,17,25]. The results of the present analysis suggest that these results are sensitive to whether the alkalinity is costed. where the reagent demand implied by
+
+#614 REJECT (content words differ: given duty +result +impact)
+    kept : A fourth direction, at an earlier stage of development, is the use of two-dimensional laminate membranes in place of conventional crystallization. Crosslinked graphene oxide (GO) and MXene laminates are of interest because their interlayer structure can be mod
+    edit : A fourth direction, at an earlier stage of development, is the use of two-dimensional laminate membranes in place of conventional crystallization. Crosslinked graphene oxide (GO) and MXene laminates are of interest because their interlayer structure can be mod
+
+#615 accept
+    was  : Neither material can presently be assumed to outperform mechanical vapor compression under the conditions modeled here. The reported performance belongs to individual laboratory membranes and does not establish the energy consumption, durability or economic vi
+    now  : Neither material can presently be assumed to outperform mechanical vapor compression under the conditions modeled here. The reported performance belongs to individual laboratory membranes and does not establish the energy consumption, durability or economic vi
+
+#617 accept
+    was  : Section 4.13 turns the negative result of Sections 4.7-4.12 into a design target, and the target defines the next stage of this work more precisely than the original question did. The question is no longer whether this architecture works but what an alkalinity
+    now  : Section 4.13 turns the negative result of Sections 4.7–4.12 into a design target, and the target defines the next stage of this work more precisely than the original question does. The question is no longer whether this architecture works but what an alkalinit
+
+#618 REJECT (content words differ: )
+    kept : Five directions follow from the analysis, and each carries a specific test. First, electrochemical base, including bipolar-membrane electrodialysis of the brine itself, avoids both purchased reagent and calcium import; the target is the yield and price combina
+    edit : Five directions follow from the analysis, and each carries a specific test. First, the electrochemical base, including bipolar-membrane electrodialysis of the brine itself, avoids both the purchased reagent and calcium import; the target is the yield and price
+
+#620 REJECT (content words differ: desalination +desalinated)
+    kept : A second research direction is whether magnesium recovered from desalination brine could serve as a precursor for metallothermic silicon production. Unlike the mineral valorization modeled above, which treats recovered magnesium hydroxide as a saleable product
+    edit : A second research direction is whether magnesium recovered from desalinated brine could serve as a precursor for metallothermic silicon production. Unlike the mineral valorization modeled above, which treats recovered magnesium hydroxide as a saleable product,
+
+#621 REJECT (content words differ: recover convert produce uses +involve +recovering +converting +producing +using)
+    kept : The conceptual pathway recovers magnesium hydroxide from the concentrated brine, converts it into a suitable magnesium-containing intermediate, produces elemental magnesium and then uses that metal to reduce externally supplied silica. The principal reduction 
+    edit : The conceptual pathway involves recovering magnesium hydroxide from concentrated brine, converting it into a suitable magnesium-containing intermediate, producing elemental magnesium and then using that metal to reduce externally supplied silica. The principal
+
+#622 accept
+    was  : The reaction is chemically established, but integrating it into a desalination facility introduces substantial additional processing requirements. Magnesium recovered as the hydroxide cannot substitute directly for elemental magnesium: conversion to the metal 
+    now  : The reaction is chemically established, but integrating it into a desalination facility introduces substantial additional processing requirements. Magnesium recovered as a hydroxide cannot substitute directly for elemental magnesium: conversion to metal requir
+
+#623 REJECT (content words differ: carrie +include +should)
+    kept : The principal research question is whether the additional silicon value could compensate for the energy, capital, reagent and purification requirements of the complete conversion pathway. Any assessment must retain the upstream magnesium-recovery cost establis
+    edit : The principal research question is whether the additional silicon value could compensate for the energy, capital, reagent and purification requirements of the complete conversion pathway. Any assessment must retain the upstream magnesium-recovery cost establis
+
+#624 accept
+    was  : Product quality is a major uncertainty. Producing elemental silicon does not establish that solar-grade or semiconductor-grade specifications can be achieved, and a future economic case should distinguish demonstrated purity from hypothetical high-purity scena
+    now  : Product quality is a major uncertainty. Producing elemental silicon does not establish that solar-grade or semiconductor-grade specifications can be achieved, and a future economic case should distinguish demonstrated purity from hypothetical high-purity scena
+
+#626 REJECT (content words differ: +thus +thus)
+    kept : The osmotic coefficient correction in Eq. (5) is carried as a swept parameter rather than a fitted correlation. Locking it requires implementing the seawater property correlations of [22] and [12] over the full 35–125 g kg−1 range of this process and resolving
+    edit : The osmotic coefficient correction in Eq. (5) is carried out as a swept parameter rather than a fitted correlation. Locking it requires implementing the seawater property correlations of [22] and [12] over the full 35–125 g kg−1 range of this process and resol
+
+#627 accept
+    was  : Advanced GO- and MXene-based membrane configurations are identified in Section 5.3 as potential alternatives for future investigation, but their performance under the modeled hypersaline operating conditions has not been experimentally established and is not i
+    now  : Advanced GO- and MXene-based membrane configurations are identified in Section 5.3 as potential alternatives for future investigations, but their performance under modeled hypersaline operating conditions has not been experimentally established and is not inco
+
+#628 accept
+    was  : The proposed magnesium-to-silicon pathway of Section 5.5 is not represented in the mass, energy, carbon or economic balances of this study. Its feasibility depends on additional magnesium-metal production and silicon purification processes, neither of which is
+    now  : The proposed magnesium-to-silicon pathway of Section 5.5 is not represented in the mass, energy, carbon or economic balances of this study. Its feasibility depends on additional magnesium-metal production and silicon purification processes, neither of which ar
+
+#630 REJECT (content words differ: required +assumption +needed)
+    kept : Three measurements would settle the questions this analysis raises, and none requires the full architecture to be built. First, the second-law efficiency of a high-pressure concentrator operating on real SWRO brine at 60–65 g L−1, which fixes the energy term t
+    edit : Three measurements would settle the questions this analysis raises, and none requires the full architecture to be built. First, the second-law efficiency of a high-pressure concentrator operating on real SWRO brine is 60–65 g L−1, which fixes the energy term o
+
+#631 REJECT (content words differ: reporting +reported)
+    kept : An additional experimental program could evaluate crosslinked GO and MXene-based membranes for hypersaline separation. Candidate materials should first be screened against representative crystallizer-feed compositions and then operated under realistic temperat
+    edit : An additional experimental program could evaluate crosslinked GO and MXene-based membranes for hypersaline separation. Candidate materials should first be screened against representative crystallizer-feed compositions and then operated under realistic temperat
+
+#632 REJECT (content words differ: close evaluate +closed +evaluated)
+    kept : The silicon pathway belongs to a separate subsequent study: close its material balance first, then bound the energy of magnesium-metal production and silicon purification, and only then evaluate life-cycle carbon and economics. None of those tests was performe
+    edit : The silicon pathway belongs to a separate subsequent study: first, the material balance is closed, then the energy of magnesium-metal production and silicon purification is bound, and then, only life-cycle carbon and economics are evaluated. None of those test
+
+#635 REJECT (content words differ: against +unlike)
+    kept : The energy claim does not survive a modern comparator. Against plants operating at 2.5–3.5 kWh m−3, the desalination stage offers no material advantage once a boron-compliant second pass is included, and the corrected concentrator increases the modeled total s
+    edit : The energy claim does not survive a modern comparator. Unlike plants operating at 2.5–3.5 kWh m−3, the desalination stage offers no material advantage once a boron-compliant second pass is included, and the corrected concentrator increases the modeled total sp
+
+#637 REJECT (content words differ: +amount)
+    kept : One modeled route removes that constraint, and quantifying the conditions under which it does so is the practical value of this analysis. When the base is generated electrochemically on site, with captured CO2 as the carbonate source, the calcium balance is ex
+    edit : One modeled route removes that constraint, and quantifying the conditions under which it does so is the practical value of this analysis. When the base is generated electrochemically on site, with captured CO2 as the carbonate source, the calcium balance is ex
+
+#638 REJECT (content words differ: site better score sets +onsite +scored +discussed)
+    kept : Treated as one design problem, alkalinity supply and calcium closure give the architecture question a quantitative answer. Closing the calcium balance costs $0.44 per cubic meter at the base case even with gypsum as a calcium sink, and $0.73 without it, and it
+    edit : Treated as one design problem, alkalinity supply and calcium closure give the architecture question a quantitative answer. Closing the calcium balance costs $0.44 per cubic meter in the base case even with gypsum as a calcium sink and $0.73 without it, and it 
+
+#639 accept
+    was  : Two further directions follow from this analysis without altering any result reported in it. Whether advanced two-dimensional membrane materials, including crosslinked graphene oxide and MXene laminates, can reduce the energy or environmental burden of final b
+    now  : Two further directions follow from this analysis without altering any of the results reported. Whether advanced two-dimensional membrane materials, including crosslinked graphene oxide and MXene laminates, can reduce the energy or environmental burden of the f
+
+#718 accept
+    was  : During the preparation of this work the author used Claude (Anthropic) as a drafting and analysis aid. The author reviewed and edited all content, verified every cited reference against Crossref, carried out and checked all modeling and numerical work, and tak
+    now  : During the preparation of this work, the author used Claude (Anthropic) as a drafting and analysis aid. The author reviewed and edited all the content, verified every cited reference against Crossref, carried out and checked all the modeling and numerical work
