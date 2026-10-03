@@ -1,5 +1,5 @@
 Submission package - DWT-D-26-01366 Revision 2
-Prepared and verified 2 October 2026. Do not upload this manifest to Editorial Manager.
+Prepared and verified 3 October 2026. Do not upload this manifest to Editorial Manager.
 
 PROVENANCE OF THE REPRODUCIBILITY CLAIM
   On 2 October 2026 the deposited repository github.com/sandlerleon/iledbv-desalination-model
@@ -10,8 +10,6 @@ PROVENANCE OF THE REPRODUCIBILITY CLAIM
     - every Monte Carlo statistic reproduced exactly (median, 5th and 95th percentile)
     - 271 of 300,000 samples below the comparator, best case $0.352, reproduced exactly
     - alkalinity routes, boron, polarization ceiling and all Section 4.13 optima reproduced exactly
-    - audit_manuscript.py run against this manuscript: 18 of 18 headline numbers present,
-      0 contradictions
     - the nine carried-over figures are pixel-identical to regeneration from v2.3.0
     - every value plotted in the two new figures matches design_costing.json and
       iledbv_revision_v2.json exactly
@@ -21,44 +19,58 @@ PROVENANCE OF THE REPRODUCIBILITY CLAIM
   This verification was carried out by the author's assistant, not by a third party, and covers
   the numerical outputs of the deposited model, not the physical validity of the model itself.
 
+WHAT CHANGED AFTER THAT VERIFICATION (manuscript v5 -> v6, 3 October 2026)
+  Two forward-looking subsections were added to the Discussion in response to editorial guidance,
+  and neither touches the model. Section 5.3 gained two paragraphs on crosslinked graphene oxide
+  and MXene laminate membranes; a new Section 5.5 sets out brine-derived magnesium as a precursor
+  for metallothermic silicon production; the former Sections 5.5 and 5.6 are renumbered 5.6 and
+  5.7 and each gained the matching qualification; one sentence was added at the end of the
+  Introduction; one paragraph was added to the Conclusions before the closing sentence; and ten
+  references, [27] to [36], were added. Silicon appears in neither the abstract nor the keywords.
+  No equation, table, figure, parameter or number was altered: audit_manuscript.py reports 18 of
+  18 headline numbers present and 0 contradictions against the same model JSON, and
+  verify_manuscript_structure.py reports equations 1-14 all cited, tables 1-12 all cited, and
+  references 1-36 all listed and all cited. Every one of the 36 DOIs resolves against Crossref
+  with a matching title; [33] differs only because the Crossref record carries inline markup
+  around the subscript x in Ti3C2Tx.
+
 DOCUMENTS
-  ILEDBV_Manuscript_Revised_v5.docx            2.08 MB  sha256:ab4b694447769d24  ok
-  ILEDBV_Manuscript_Revised_v5_marked.docx     2.08 MB  sha256:adeae6f8426ac4ee  ok
-  DWT_Response_to_Reviewers_R2.docx            0.05 MB  sha256:6c8ca67d3131d168  ok
-  DWT_Revision2_Cover_Letter.docx              0.04 MB  sha256:c09bc305134d4c9a  ok
-  Highlights_ILEDBV_Revised.docx               0.04 MB  sha256:756c745045967103  ok
+  ILEDBV_Manuscript_Revised_v6.docx             2.18 MB  sha256:5ee49fa93b8a8208  ok
+  ILEDBV_Manuscript_Revised_v6_marked.docx      2.19 MB  sha256:d736cb91ec1c8a81  ok
+  DWT_Response_to_Reviewers_R2.docx             0.05 MB  sha256:df5e18d792dcfbf6  ok
+  DWT_Revision2_Cover_Letter.docx               0.04 MB  sha256:b4d2344c339b5934  ok
+  Highlights_ILEDBV_Revised.docx                0.04 MB  sha256:756c745045967103  ok
 
 FIGURES
-  file                   pixels       dpi    native size      dpi at 190 mm
-  Figure01.png           5467x2106    600    9.11 x 3.51 in    731
-  Figure01.tif           5467x2106    600    9.11 x 3.51 in    731
-  Figure02.png           3637x1603    300    12.12 x 5.34 in   486
-  Figure02.tif           3637x1603    300    12.12 x 5.34 in   486
-  Figure03.png           3698x2300    600    6.16 x 3.83 in    494
-  Figure03.tif           3698x2300    600    6.16 x 3.83 in    494
-  Figure04.png           3488x2338    600    5.81 x 3.90 in    466
-  Figure04.tif           3488x2338    600    5.81 x 3.90 in    466
-  Figure05.png           3479x2536    600    5.80 x 4.23 in    465
-  Figure05.tif           3479x2536    600    5.80 x 4.23 in    465
-  Figure06.png           5128x2449    600    8.55 x 4.08 in    686
-  Figure06.tif           5128x2449    600    8.55 x 4.08 in    686
-  Figure07.png           4250x1715    300    14.17 x 5.72 in   568
-  Figure07.tif           4250x1715    300    14.17 x 5.72 in   568
-  Figure08.png           3536x2289    600    5.89 x 3.82 in    473
-  Figure08.tif           3536x2289    600    5.89 x 3.81 in    473
-  Figure09.png           3886x1147    300    12.95 x 3.82 in   520
-  Figure09.tif           3886x1147    300    12.95 x 3.82 in   520
-  Figure10.png           2921x1121    300    9.74 x 3.74 in    391
-  Figure10.tif           2921x1121    300    9.74 x 3.74 in    391
-  Figure11.png           3450x1380    300    11.50 x 4.60 in   461
-  Figure11.tif           3450x1380    300    11.50 x 4.60 in   461
-  Graphical_Abstract.png 3198x1307    300    10.66 x 4.36 in   428
-  Graphical_Abstract.tif 3198x1307    300    10.66 x 4.36 in   428
+  file                   pixels       dpi   native size      dpi at 190 mm
+  Figure01.png           5467x2106    600   9.11 x 3.51 in   731
+  Figure01.tif           5467x2106    600   9.11 x 3.51 in   731
+  Figure02.png           3637x1603    300   12.12 x 5.34 in  486
+  Figure02.tif           3637x1603    300   12.12 x 5.34 in  486
+  Figure03.png           3698x2300    600   6.16 x 3.83 in   494
+  Figure03.tif           3698x2300    600   6.16 x 3.83 in   494
+  Figure04.png           3488x2338    600   5.81 x 3.90 in   466
+  Figure04.tif           3488x2338    600   5.81 x 3.90 in   466
+  Figure05.png           3479x2536    600   5.80 x 4.23 in   465
+  Figure05.tif           3479x2536    600   5.80 x 4.23 in   465
+  Figure06.png           5128x2449    600   8.55 x 4.08 in   686
+  Figure06.tif           5128x2449    600   8.55 x 4.08 in   686
+  Figure07.png           4250x1715    300   14.17 x 5.72 in  568
+  Figure07.tif           4250x1715    300   14.17 x 5.72 in  568
+  Figure08.png           3536x2289    600   5.89 x 3.81 in   473
+  Figure08.tif           3536x2289    600   5.89 x 3.81 in   473
+  Figure09.png           3886x1147    300   12.95 x 3.82 in  519
+  Figure09.tif           3886x1147    300   12.95 x 3.82 in  519
+  Figure10.png           2921x1121    300   9.74 x 3.74 in   390
+  Figure10.tif           2921x1121    300   9.74 x 3.74 in   390
+  Figure11.png           3450x1380    300   11.50 x 4.60 in  461
+  Figure11.tif           3450x1380    300   11.50 x 4.60 in  461
+  Graphical_Abstract.png 3198x1307    300   10.66 x 4.36 in  428
+  Graphical_Abstract.tif 3198x1307    300   10.66 x 4.36 in  428
 
 CHECKS
   highlights          5 bullets, longest 78 characters (limit 85)
-  manuscript          11 embedded figures, 20 native equation objects, abstract 250 words
-  marked copy         135 highlighted runs
-  plotting script     make_new_figures_v5.py parses
-
-FILES 30   TOTAL 17.4 MB   PROBLEMS: none
+  manuscript          11 embedded figures, 20 native equation objects, abstract 250 words, 36 references
+  numbers             audit_manuscript.py: 18/18 headline numbers present, 0 contradictions
+  structure           verify_manuscript_structure.py: no problems (equations, tables, figures, references)
+  DOIs                36/36 resolve against Crossref with matching titles

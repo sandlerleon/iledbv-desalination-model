@@ -31,16 +31,32 @@ paper is unchanged and still regenerates from the model code as it stood at
   in the manuscript by `revision2/make_new_figures_v5.py`; no new calculation is
   performed. Figures are renumbered to citation order and numbered captions are
   added, which the previous version lacked entirely.
-- Sections 5.5 and 5.6 now state that the brine concentrator is bounded
+- Sections 5.6 and 5.7 now state that the brine concentrator is bounded
   thermodynamically rather than designed hydraulically, and specify the
   element-level and product-characterization measurements that would settle
   Reviewer 3's remaining questions.
+- **Two forward-looking subsections were added to the Discussion (manuscript v6,
+  3 October 2026)** in response to editorial guidance rather than a reviewer
+  comment, and neither touches the model. Section 5.3 gained two paragraphs on
+  crosslinked graphene oxide and MXene laminate membranes as a possible
+  alternative to the crystallization stage, including the comparison such a
+  membrane would have to pass against the MVC reference at the modelled
+  crystallizer-feed salinity of 124.8 g/L. A new Section 5.5 sets out
+  brine-derived magnesium as a precursor for metallothermic silicon production,
+  with the four stages a future study would need and the reasons it is not
+  costed here. Both are excluded from the mass, energy, carbon and economic
+  balances; the former Sections 5.5 and 5.6 are renumbered 5.6 and 5.7 and each
+  records that exclusion. Ten references, [27] to [36], were added, each
+  resolved against its Crossref record. Silicon appears in neither the abstract
+  nor the keywords, and `audit_manuscript.py` still reports 18 of 18 headline
+  numbers present and 0 contradictions.
 - Five internal inconsistencies found in checking, and not raised in review, are
   corrected. One is substantive: the Introduction still carried a conclusion from
   before the economic reversal.
 
 The complete submitted package is in **`revision2/`**, with `MANIFEST.txt`
-recording a SHA-256 for each document and the resolution of each figure. Print
+recording a SHA-256 for each document and the resolution of each figure; the manuscript there is
+`ILEDBV_Manuscript_Revised_v6.docx`. Print
 figures there were exported from this code with `savefig` dpi raised from 300 to
 600; `figures/` keeps the native 300 dpi output of `code/revision/make_figures.py`.
 
@@ -303,7 +319,8 @@ restores each one while keeping the spelling and typography.
 
 Concept DOIs, which always resolve to the latest version:
 
-- Code and model: [10.5281/zenodo.22178234](https://doi.org/10.5281/zenodo.22178234) — this release: v2.3.0
+- Code and model: [10.5281/zenodo.22178234](https://doi.org/10.5281/zenodo.22178234) — this release: v2.5.0
+  (the model itself is unchanged since v2.3.0, which is the tag the manuscript cites)
 - Manuscript: [10.5281/zenodo.22178232](https://doi.org/10.5281/zenodo.22178232)
 
 ## License

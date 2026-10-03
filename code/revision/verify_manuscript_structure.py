@@ -20,7 +20,7 @@ from docx.oxml.ns import qn
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
-DOC = os.path.join(REPO, "manuscript", "ILEDBV_Manuscript_Revised_v4.docx")
+DOC = os.path.join(REPO, "revision2", "ILEDBV_Manuscript_Revised_v6.docx")
 
 
 def blocks(doc):

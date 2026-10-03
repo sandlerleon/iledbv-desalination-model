@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""Marked-up copy of manuscript v4 for the DWT revision upload.
+"""Marked-up copy of the current manuscript for the DWT revision upload.
 
-Every sentence of v4 that does not appear (near-verbatim) in the originally
+Every sentence of the revision that does not appear (near-verbatim) in the originally
 submitted manuscript is highlighted yellow. Sentence-level highlighting is used
 rather than tracked changes because the revision rewrites most of the paper, and
 a tracked-change diff of a rewrite is unreadable.
@@ -21,9 +21,10 @@ from docx.text.run import Run
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 MS = os.path.abspath(os.path.join(HERE, "..", "..", "manuscript"))
+REV = os.path.abspath(os.path.join(HERE, "..", "..", "revision2"))
 ORIG = os.path.join(MS, "ILEDBV_Desalination_Manuscript.docx")
-NEW = os.path.join(MS, "ILEDBV_Manuscript_Revised_v4.docx")
-OUT = os.path.join(MS, "ILEDBV_Manuscript_Revised_v4_marked.docx")
+NEW = os.path.join(REV, "ILEDBV_Manuscript_Revised_v6.docx")
+OUT = os.path.join(REV, "ILEDBV_Manuscript_Revised_v6_marked.docx")
 
 SENT = re.compile(r"\S.*?(?:[.!?]+(?=\s|$)|$)")
 
