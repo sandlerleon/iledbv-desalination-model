@@ -53,7 +53,7 @@ DOCUMENTS
   ILEDBV_Manuscript_Revised_v6.docx             2.18 MB  sha256:8a4314fef33aaa04  ok
   ILEDBV_Manuscript_Revised_v6_marked.docx      2.19 MB  sha256:63fe2b2fbc3dd165  ok
   DWT_Response_to_Reviewers_R2.docx             0.05 MB  sha256:dd87208293b8a61e  ok
-  DWT_Revision2_Cover_Letter.docx               0.04 MB  sha256:d13192994f755dfd  ok
+  DWT_Revision2_Cover_Letter.docx               0.04 MB  sha256:ecc5e730444b5803  ok
   Highlights_ILEDBV_Revised.docx                0.04 MB  sha256:756c745045967103  ok
 
 FIGURES
